@@ -3,8 +3,7 @@
 This is my personal data analyst portfolio built using **Streamlit**. It highlights my skills and projects, including interactive dashboards and real-time applications built with Python.
 
 ## 🌐 Live Demo
-👉 [Streamlit App](https://sarthak-portfolio.streamlit.app)  
-*(Replace with your actual live link after deployment)*
+👉 [Streamlit App](https://sarthak-portfolio.streamlit.app) 
 
 ---
 
