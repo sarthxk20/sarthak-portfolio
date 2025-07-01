@@ -77,7 +77,7 @@ I’m ready to bring energy, adaptability, and critical thinking to any data-foc
 st.markdown("---")
 st.header("Tech Stack")
 
-st.write(\"\"\"
+st.write("""
 Here's a snapshot of the tools and platforms I regularly use across my projects:
 
 - **Programming Languages:** Python, SQL (basic)
@@ -85,7 +85,7 @@ Here's a snapshot of the tools and platforms I regularly use across my projects:
 - **App & Dashboard Tools:** Streamlit, Tableau
 - **Development Tools:** Git & GitHub, Jupyter Notebook, VS Code
 - **Deployment Platforms:** Streamlit Cloud, GitHub Pages, Google Colab
-\"\"\")
+""")
 
 # ---------- SKILLS SECTION ----------
 st.markdown("---")
