@@ -52,6 +52,14 @@ st.write("""
 - **Frameworks:** Streamlit
 """)
 
+st.markdown("📄 [View My Resume](https://raw.githubusercontent.com/sarthxk20/sarthak-portfolio/main/sarthak_shandilya_data_analyst_resume.pdf)")
+
+import requests
+
+resume_url = "https://raw.githubusercontent.com/sarthxk20/sarthak-portfolio/main/sarthak_shandilya_data_analyst_resume.pdf"
+response = requests.get(resume_url)
+st.download_button("📄 Download My Resume", response.content, "Sarthak_Shandilya_Resume.pdf", "application/pdf")
+
 # ---------- FOOTER ----------
 st.markdown("---")
 st.markdown("*Built with ❤️ using Streamlit*")
