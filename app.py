@@ -52,8 +52,6 @@ st.write("""
 - **Frameworks:** Streamlit
 """)
 
-st.markdown("📄 [View My Resume](https://raw.githubusercontent.com/sarthxk20/sarthak-portfolio/main/sarthak_shandilya_data_analyst_resume.pdf)")
-
 import requests
 
 resume_url = "https://raw.githubusercontent.com/sarthxk20/sarthak-portfolio/main/sarthak_shandilya_data_analyst_resume.pdf"
