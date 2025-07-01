@@ -101,11 +101,19 @@ st.write("""
 - Team Collaboration & Communication
 """)
 
-import requests
+# ---------- RESUME SECTION ----------
+st.markdown("---")
+st.header("📄 My Resume")
 
-resume_url = "https://raw.githubusercontent.com/sarthxk20/sarthak-portfolio/main/sarthak_shandilya_data_analyst_resume.pdf"
-response = requests.get(resume_url)
-st.download_button("📄 Download My Resume", response.content, "Sarthak_Shandilya_Resume.pdf", "application/pdf")
+st.write("Click below to download my resume as a PDF:")
+
+with open("sarthak_shandilya_data_analyst_resume.pdf", "rb") as file:
+    st.download_button(
+        label="📥 Download Resume",
+        data=file,
+        file_name="Sarthak_Shandilya_Resume.pdf",
+        mime="application/pdf"
+    )
 
 st.header("Get to Know Me")
 with st.expander("🔍 Why data analysis?"):
