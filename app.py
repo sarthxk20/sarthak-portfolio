@@ -91,7 +91,7 @@ Here's a snapshot of the tools and platforms I regularly use across my projects:
 st.markdown("---")
 st.header("Skills")
 
-st.write(\"\"\"
+st.write("""
 - Data Cleaning & Preprocessing
 - Exploratory Data Analysis (EDA)
 - Data Visualization & Storytelling
@@ -99,7 +99,7 @@ st.write(\"\"\"
 - API Integration & JSON Handling
 - Problem Solving & Critical Thinking
 - Team Collaboration & Communication
-\"\"\")
+""")
 
 import requests
 
