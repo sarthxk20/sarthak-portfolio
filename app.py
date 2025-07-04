@@ -30,6 +30,7 @@ Built a dynamic dashboard using Streamlit to visualize sales data. Features incl
 - Filterable charts (Plotly)
 - KPIs like total sales, sales by category
 """)
+st.markdown("**Live App:** [sarthxk20-superstore-sales-dashboard.streamlit.app](https://sarthxk20-superstore-sales-dashboard.streamlit.app)")
 st.markdown("**GitHub:** [View Project](https://github.com/sarthxk20/superstore-sales-dashboard)")
 
 # Project 2: Weather App
@@ -40,6 +41,7 @@ Created a weather forecast app using Streamlit and OpenWeatherMap API. Features 
 - API integration and error handling
 - Dynamic visuals (icons, temperature, wind, humidity)
 """)
+st.markdown("**Live App:** [weather-now-sarthxk20.streamlit.app](https://weather-now-sarthxk20.streamlit.app)")
 st.markdown("**GitHub:** [View Project](https://github.com/sarthxk20/weather-now)")
 
 # Project 3: Remote Python Job Dashboard
