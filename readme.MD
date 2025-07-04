@@ -27,6 +27,11 @@ I’m an aspiring data analyst passionate about working with data to uncover ins
 - Visual display of temperature, wind, humidity  
 🔗 [GitHub Link](https://github.com/sarthxk20)
 
+### 3. 🧭 Remote Python Job Dashboard
+A real-time job listing dashboard built using Streamlit and web scraping from RemoteOK.  
+🔗 [Live Demo](https://jobdash.streamlit.app) | [GitHub](https://github.com/sarthxk20/jobdash)
+
+
 ---
 
 ## 🛠️ Skills
