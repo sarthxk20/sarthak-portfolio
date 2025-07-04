@@ -42,6 +42,20 @@ Created a weather forecast app using Streamlit and OpenWeatherMap API. Features 
 """)
 st.markdown("**GitHub:** [View Project](https://github.com/sarthxk20/weather-now)")
 
+# Project 3: Remote Python Job Dashboard
+st.subheader("3. Remote Python Job Dashboard")
+st.write("""
+An interactive dashboard that visualizes remote Python job listings scraped from RemoteOK.
+Features include:
+- Real-time web scraping
+- Filters by company, location, keyword
+- Visuals: bar chart, word cloud, tech skills chart
+- CSV download of filtered jobs
+""")
+st.markdown("**Live App:** [jobdash.streamlit.app](https://jobdash.streamlit.app)")
+st.markdown("**GitHub:** [Remote Job Dashboard](https://github.com/sarthxk20/jobdash)")
+
+
 # ---------- ARTICLES / MINI BLOG SECTION ----------
 st.markdown("---")
 st.header("Articles & Insights")
