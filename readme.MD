@@ -9,9 +9,24 @@ This is my personal data analyst portfolio built using **Streamlit**. It highlig
 
 ## 📌 About Me
 
-I’m an aspiring data analyst passionate about working with data to uncover insights and drive decisions. With experience in Python, Excel, Streamlit, and Tableau, I enjoy building clean, visual, and interactive tools.
+I’m a data analyst passionate about working with data to uncover insights and drive decisions. With experience in Python, Excel, Streamlit, and Tableau, I enjoy building clean, visual, and interactive tools.
 
 ---
+
+🎓 Internship Experience
+📌 Data Analyst Intern – Evoastra
+Currently contributing to a live web scraping and analytics project with a focus on Exploratory Data Analysis (EDA).
+
+Responsibilities:
+
+Performed EDA on scraped datasets using Pandas and Seaborn
+
+Identified patterns, trends, and data quality issues to support business decisions
+
+Collaborated with the scraping team to ensure data accuracy and structure
+
+Supported dashboard development by generating meaningful visual summaries with Streamlit
+
 
 ## 🧠 Projects
 
