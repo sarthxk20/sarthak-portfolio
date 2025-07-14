@@ -13,20 +13,17 @@ I’m a data analyst passionate about working with data to uncover insights and 
 
 ---
 
-🎓 Internship Experience
+## 🎓 Internship Experience
 
-📌 Data Analyst Intern – Evoastra
-Currently contributing to a live web scraping and analytics project with a focus on Exploratory Data Analysis (EDA).
+### 📌 Data Analyst Intern – Evoastra  
+**July 2025 – Present**  
+*Currently contributing to a live web scraping and analytics project with a focus on Exploratory Data Analysis (EDA).*
 
-Responsibilities:
-
-Performed EDA on scraped datasets using Pandas and Seaborn
-
-Identified patterns, trends, and data quality issues to support business decisions
-
-Collaborated with the scraping team to ensure data accuracy and structure
-
-Supported dashboard development by generating meaningful visual summaries with Streamlit
+**Responsibilities:**
+- Performed EDA on scraped datasets using **Pandas** and **Seaborn**  
+- Identified patterns, trends, and data quality issues to support business decisions  
+- Collaborated with the scraping team to ensure data accuracy and structure  
+- Supported dashboard development by generating meaningful visual summaries with **Streamlit**
 
 
 ## 🧠 Projects
