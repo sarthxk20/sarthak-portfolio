@@ -14,6 +14,7 @@ I’m a data analyst passionate about working with data to uncover insights and 
 ---
 
 🎓 Internship Experience
+
 📌 Data Analyst Intern – Evoastra
 Currently contributing to a live web scraping and analytics project with a focus on Exploratory Data Analysis (EDA).
 
