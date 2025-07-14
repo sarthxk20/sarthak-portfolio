@@ -9,7 +9,7 @@ This is my personal data analyst portfolio built using **Streamlit**. It highlig
 
 ## 📌 About Me
 
-I’m a data analyst passionate about working with data to uncover insights and drive decisions. With experience in Python, Excel, Streamlit, and Tableau, I enjoy building clean, visual, and interactive tools.
+I’m a data analyst passionate about working with data to uncover insights and drive decisions. With experience in Python, Excel, Streamlit,Power BI and Tableau, I enjoy building clean, visual, and interactive tools.
 
 ---
 
