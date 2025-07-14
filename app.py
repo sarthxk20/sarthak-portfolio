@@ -6,7 +6,7 @@ st.set_page_config(page_title="Sarthak Shandilya Portfolio", layout="wide")
 
 # ---------- HEADER SECTION ----------
 st.title("Sarthak Shandilya")
-st.subheader("Aspiring Data Analyst | Python | Excel | Tableau | Streamlit | API Integration")
+st.subheader("Data Analyst | Python | Excel | Tableau | Streamlit | API Integration")
 
 st.write("""
 Hello! I'm a passionate data enthusiast with hands-on experience in data analysis, visualization, and dashboard development. 
@@ -17,6 +17,22 @@ I love working with Python, Excel, and tools like Streamlit and Tableau to turn 
 st.markdown("**Email:** sarthakshandilya9@gmail.com")
 st.markdown("**GitHub:** [github.com/sarthxk20](https://github.com/sarthxk20)")
 st.markdown("**LinkedIn:** [linkedin.com/in/sarthxk20](https://linkedin.com/in/sarthxk20)")
+
+# ---------- INTERNSHIP SECTION ----------
+st.markdown("---")
+st.header("🎓 Internships")
+
+st.subheader("Data Analyst Intern – Evoastra")
+st.write("""
+Currently working as a Data Analyst Intern at **Evoastra**, contributing to a live web scraping and analytics project with a focus on **Exploratory Data Analysis (EDA)**.
+
+**Key Responsibilities:**
+- Conducting EDA on scraped datasets using **Pandas** and **Seaborn**
+- Identifying patterns, trends, and outliers to support business insights
+- Collaborating with the scraping team to ensure clean, analysis-ready data
+- Contributing visual summaries to support dashboard development in **Streamlit**
+""")
+
 
 # ---------- PROJECTS SECTION ----------
 st.markdown("---")
