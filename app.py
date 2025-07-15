@@ -20,7 +20,7 @@ st.markdown("**LinkedIn:** [linkedin.com/in/sarthxk20](https://linkedin.com/in/s
 
 # ---------- INTERNSHIP SECTION ----------
 st.markdown("---")
-st.header("🎓 Internships")
+st.header("Internships")
 
 st.subheader("Data Analyst Intern – Evoastra")
 st.write("""
