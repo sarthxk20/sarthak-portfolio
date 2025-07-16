@@ -116,7 +116,7 @@ Here's a snapshot of the tools and platforms I regularly use across my projects:
 - **Data Libraries:** Pandas, NumPy, Plotly, Seaborn, Matplotlib, Requests
 - **App & Dashboard Tools:** Streamlit, Power BI, Tableau
 - **Development Tools:** Git & GitHub, Jupyter Notebook, VS Code
-- **Deployment Platforms:** Streamlit Cloud, GitHub Pages, Google Collab
+- **Deployment Platforms:** Streamlit Cloud, GitHub Pages, Google Sheets, Google Colab
 """)
 
 # ---------- SKILLS SECTION ----------
