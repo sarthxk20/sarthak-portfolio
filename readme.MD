@@ -36,7 +36,7 @@ Some of my projects include a Fraud Detection ML model, Web Scraping app, Sales 
 - Detected fraudulent transactions with classification models
 - Applied feature engineering, EDA, and model evaluation (precision, recall, F1-score)
 - Deployed as an interactive Streamlit web app for real-time predictions
-🔗 [GitHub Link](https://github.com/sarthxk20)
+ 🔗 [GitHub Link](https://github.com/sarthxk20)
 
 ### 2. 📈 Interactive Sales Dashboard  
 - Built using Streamlit & Plotly  
@@ -76,5 +76,6 @@ A real-time job listing dashboard built using Streamlit and web scraping from Re
 ---
 
 > *Built with ❤️ using Streamlit*
+
 
 
