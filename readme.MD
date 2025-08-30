@@ -9,7 +9,9 @@ This is my personal data analyst portfolio built using **Streamlit**. It highlig
 
 ## 📌 About Me
 
-I’m a data analyst passionate about working with data to uncover insights and drive decisions. With experience in Python, Excel, Streamlit,Power BI and Tableau, I enjoy building clean, visual, and interactive tools.
+I’m Sarthak, a Data Analyst and Aspiring Data Scientist with experience in Python, SQL, and Machine Learning.
+I enjoy building end-to-end projects involving data cleaning, visualization, predictive modeling, and deployment.
+Some of my projects include a Fraud Detection ML model, Web Scraping app, Sales Dashboard, and Weather Forecast app.
 
 ---
 
@@ -28,19 +30,27 @@ I’m a data analyst passionate about working with data to uncover insights and 
 
 ## 🧠 Projects
 
-### 1. 📈 Interactive Sales Dashboard  
+### 1. 🧠 Fraud Detection using Machine Learning
+
+- Built using Python, Scikit-Learn, Streamlit, and Pandas
+- Detected fraudulent transactions with classification models
+- Applied feature engineering, EDA, and model evaluation (precision, recall, F1-score)
+- Deployed as an interactive Streamlit web app for real-time predictions
+🔗 [GitHub Link](https://github.com/sarthxk20)
+
+### 2. 📈 Interactive Sales Dashboard  
 - Built using Streamlit & Plotly  
 - Regional and monthly sales performance  
 - KPIs and category breakdown  
 🔗 [GitHub Link](https://github.com/sarthxk20)
 
-### 2. 🌤️ Live Weather Forecast App  
+### 3. 🌤️ Live Weather Forecast App  
 - Uses OpenWeatherMap API and Streamlit  
 - Real-time city-based forecasts  
 - Visual display of temperature, wind, humidity  
 🔗 [GitHub Link](https://github.com/sarthxk20)
 
-### 3. 🧭 Remote Python Job Dashboard
+### 4 . 🧭 Remote Python Job Dashboard
 A real-time job listing dashboard built using Streamlit and web scraping from RemoteOK.  
 🔗 [Live Demo](https://jobdash.streamlit.app) | [GitHub](https://github.com/sarthxk20/jobdash)
 
@@ -49,8 +59,9 @@ A real-time job listing dashboard built using Streamlit and web scraping from Re
 
 ## 🛠️ Skills
 
-**Languages & Tools:** Python, Excel, VS Code, Tableau  
-**Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Plotly  
+**Languages & Tools:** Python, Machine Learning, Excel, VS Code, Tableau, Jupyter Notebook, Google Colab, Power BI
+**Machine Learning** Supervised Learning (Classification, Regression), Unsupervised Learning (Clustering, PCA), Ensemble Methods (Random Forest, XGBoost), Feature Engineering, Hyperparameter Tuning, Model Evaluation (Accuracy, Precision, Recall, F1-score), Predictive Modeling
+**Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Plotly, Selenium
 **Techniques:** Data Cleaning, Data Visualization, API Integration  
 **Frameworks:** Streamlit
 
@@ -65,3 +76,4 @@ A real-time job listing dashboard built using Streamlit and web scraping from Re
 ---
 
 > *Built with ❤️ using Streamlit*
+
