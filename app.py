@@ -139,7 +139,7 @@ st.header("📄 My Resume")
 
 st.write("Click below to download my resume as a PDF:")
 
-with open("sarthak_shandilya_data_analyst_resume.pdf", "rb") as file:
+with open("sarthak_shandilya_resume.pdf", "rb") as file:
     st.download_button(
         label="📥 Download Resume",
         data=file,
@@ -156,3 +156,4 @@ with st.expander("🎮 Fun fact?"):
 # ---------- FOOTER ----------
 st.markdown("---")
 st.markdown("*Built with ❤️ using Streamlit*")
+
