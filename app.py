@@ -6,11 +6,9 @@ st.set_page_config(page_title="Sarthak Shandilya Portfolio", layout="wide")
 
 # ---------- HEADER SECTION ----------
 st.title("Sarthak Shandilya")
-st.subheader("Data Analyst | Python | Excel | Tableau | Streamlit | API Integration")
+st.subheader("Data Analyst | Aspiring Data Scientist | Building end-to-end solutions with Python, Machine Learning, and Streamlit")
 
-st.write("""
-Hello! I'm a passionate data enthusiast with hands-on experience in data analysis, visualization, and dashboard development. 
-I love working with Python, Excel, and tools like Streamlit and Tableau to turn raw data into meaningful insights.
+st.write("""Hello! I’m Sarthak, a Data Analyst and Aspiring Data Scientist with hands-on experience in data analysis, machine learning, and dashboard development. I enjoy working with Python, SQL, Streamlit, and Tableau to transform raw data into actionable insights and interactive solutions.
 """)
 
 # ---------- SOCIAL LINKS ----------
@@ -156,4 +154,5 @@ with st.expander("🎮 Fun fact?"):
 # ---------- FOOTER ----------
 st.markdown("---")
 st.markdown("*Built with ❤️ using Streamlit*")
+
 
