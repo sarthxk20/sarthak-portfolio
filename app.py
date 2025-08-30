@@ -36,8 +36,20 @@ Currently working as a Data Analyst Intern at **Evoastra**, contributing to a li
 st.markdown("---")
 st.header("Projects")
 
-# Project 1: Sales Dashboard
-st.subheader("1. Interactive Sales Dashboard")
+# Project 1: Fraud Detection
+st.subheader("1. Fraud Detection with Machine Learning")
+st.write("""
+Developed a machine learning model to detect fraudulent transactions. Features include:
+- Data preprocessing, feature engineering, and EDA
+- Classification models with evaluation (accuracy, precision, recall, F1-score)
+- Interactive Streamlit app for real-time fraud prediction
+""")
+st.markdown("**Live App:** [fraud-detectionproject.streamlit.app](https://fraud-detectionproject.streamlit.app)")
+st.markdown("**GitHub:** [View Project](https://github.com/sarthxk20/fraud-detection)")
+
+
+# Project 2: Sales Dashboard
+st.subheader("2. Interactive Sales Dashboard")
 st.write("""
 Built a dynamic dashboard using Streamlit to visualize sales data. Features include:
 - Regional and monthly performance metrics
@@ -47,8 +59,8 @@ Built a dynamic dashboard using Streamlit to visualize sales data. Features incl
 st.markdown("**Live App:** [sarthxk20-superstore-sales-dashboard.streamlit.app](https://sarthxk20-superstore-sales-dashboard.streamlit.app)")
 st.markdown("**GitHub:** [View Project](https://github.com/sarthxk20/superstore-sales-dashboard)")
 
-# Project 2: Weather App
-st.subheader("2. Live Weather Forecast App")
+# Project 3: Weather App
+st.subheader("3. Live Weather Forecast App")
 st.write("""
 Created a weather forecast app using Streamlit and OpenWeatherMap API. Features include:
 - Real-time weather by city
@@ -58,8 +70,8 @@ Created a weather forecast app using Streamlit and OpenWeatherMap API. Features 
 st.markdown("**Live App:** [weather-now-sarthxk20.streamlit.app](https://weather-now-sarthxk20.streamlit.app)")
 st.markdown("**GitHub:** [View Project](https://github.com/sarthxk20/weather-now)")
 
-# Project 3: Remote Python Job Dashboard
-st.subheader("3. Remote Python Job Dashboard")
+# Project 4: Remote Python Job Dashboard
+st.subheader("4. Remote Python Job Dashboard")
 st.write("""
 An interactive dashboard that visualizes remote Python job listings scraped from RemoteOK.
 Features include:
@@ -75,6 +87,15 @@ st.markdown("**GitHub:** [Remote Job Dashboard](https://github.com/sarthxk20/job
 # ---------- ARTICLES / MINI BLOG SECTION ----------
 st.markdown("---")
 st.header("Articles & Insights")
+
+with st.expander("🧠 Building a Fraud Detection ML Model"):
+    st.write("""
+    I worked on a fraud detection project where the goal was to classify transactions as fraudulent or genuine.
+    The main challenge was handling class imbalance since fraudulent cases were much fewer than normal ones.
+    I applied techniques like feature engineering, exploratory data analysis (EDA), and trained classification models using Scikit-Learn.
+    Evaluation metrics such as precision, recall, and F1-score were critical in measuring performance.
+    Finally, I deployed the model as a Streamlit app for real-time fraud prediction.
+    """)
 
 with st.expander("📌 How I Built My Sales Dashboard"):
     st.write("""
@@ -96,11 +117,11 @@ st.markdown("---")
 st.header("Why Hire Me?")
 
 st.write("""
-I’m a self-driven and curious Data Analyst who turns raw data into meaningful insights.  
-With hands-on experience in real-world projects using Python, Streamlit, and Tableau, I’ve built interactive dashboards and apps that showcase practical skills—not just theory.
+I’m a self-driven and curious Data Analyst | Aspiring Data Scientist who enjoys turning raw data into actionable insights.  
+With hands-on experience in real-world projects, I’ve built and deployed solutions such as a fraud detection ML model, sales dashboard, web scraping app, and weather forecast tool using APIs.  
 
-I’m passionate about turning data into clear, actionable stories, continuously learning new tools, and solving real-world problems through analysis and visualization.  
-I’m ready to bring energy, adaptability, and critical thinking to any data-focused team.
+I combine skills in Python, SQL, Machine Learning, and visualization tools like Streamlit and Tableau to deliver clear, data-driven stories and decision-ready insights.  
+Passionate about continuous learning, I bring adaptability, problem-solving, and critical thinking to every project and team I work with.
 """)
 
 # ---------- TECH STACK SECTION ----------
@@ -110,26 +131,29 @@ st.header("Tech Stack")
 st.write("""
 Here's a snapshot of the tools and platforms I regularly use across my projects:
 
-- **Programming Languages:** Python, SQL (basic)
-- **Data Libraries:** Pandas, NumPy, Plotly, Seaborn, Matplotlib, Requests
-- **App & Dashboard Tools:** Streamlit, Power BI, Tableau
-- **Development Tools:** Git & GitHub, Jupyter Notebook, VS Code
-- **Deployment Platforms:** Streamlit Cloud, GitHub Pages, Google Sheets, Google Colab
+- Programming Languages: Python, SQL
+- Data Libraries: Pandas, NumPy, Scikit-Learn, Plotly, Seaborn, Matplotlib, Requests
+- App & Dashboard Tools: Streamlit, Tableau, Power BI
+- Machine Learning: Scikit-Learn (classification, regression, model evaluation)
+- Development Tools: Git, GitHub, Jupyter Notebook, VS Code
+- Deployment Platforms: Streamlit Cloud, GitHub Pages, Google Colab
 """)
+
 
 # ---------- SKILLS SECTION ----------
 st.markdown("---")
 st.header("Skills")
 
 st.write("""
-- Data Cleaning & Preprocessing
-- Exploratory Data Analysis (EDA)
-- Data Visualization & Storytelling
-- Dashboard Development
-- API Integration & JSON Handling
-- Problem Solving & Critical Thinking
-- Team Collaboration & Communication
+- Data Cleaning, Wrangling & Preprocessing  
+- Exploratory Data Analysis (EDA) & Statistical Analysis  
+- Data Visualization & Storytelling (Seaborn, Plotly, Tableau)  
+- Machine Learning (Classification, Regression, Model Evaluation)  
+- Dashboard Development (Streamlit, Power BI, Tableau)  
+- API Integration & Web Scraping  
+- Problem Solving, Critical Thinking & Team Collaboration  
 """)
+
 
 # ---------- RESUME SECTION ----------
 st.markdown("---")
@@ -146,13 +170,23 @@ with open("sarthak_shandilya_resume.pdf", "rb") as file:
     )
 
 st.header("Get to Know Me")
-with st.expander("🔍 Why data analysis?"):
-    st.write("I enjoy finding patterns, asking questions, and turning messy data into something useful.")
-with st.expander("🎮 Fun fact?"):
-    st.write("I love strategy gaming and often track my own game stats!")
+
+with st.expander("🔍 Why Data Analysis & Data Science?"):
+    st.write("""
+    I love uncovering patterns in data, asking meaningful questions, and turning messy datasets into actionable insights.  
+    For me, data analysis is not just about numbers — it’s about solving real-world problems and telling impactful stories through data.
+    """)
+
+with st.expander("🎮 Fun fact"):
+    st.write("""
+    I’m a big fan of strategy gaming and often analyze my own gameplay stats to improve performance.  
+    It’s like applying data analysis to gaming — insights that make the next move smarter!
+    """)
+
 
 # ---------- FOOTER ----------
 st.markdown("---")
 st.markdown("*Built with ❤️ using Streamlit*")
+
 
 
