@@ -1,6 +1,6 @@
 # 📊 Sarthak Shandilya – Data Analyst Portfolio
 
-This is my personal data analyst portfolio built using **Streamlit**. It highlights my skills and projects, including interactive dashboards and real-time applications built with Python.
+This is my personal data analyst/ data science portfolio built using **Streamlit**. It highlights my skills and projects, including interactive dashboards and real-time applications built with Python.
 
 ## 🌐 Live Demo
 👉 [Streamlit App](https://sarthak-portfolio.streamlit.app) 
@@ -76,4 +76,5 @@ A real-time job listing dashboard built using Streamlit and web scraping from Re
 ---
 
 > *Built with ❤️ using Streamlit*
+
 
