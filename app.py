@@ -136,7 +136,7 @@ def show_tech_and_skills():
         - **Machine Learning:** Supervised & Unsupervised Learning, Model Deployment, Ensemble Methods (Random Forest, XGBoost), Model Evaluation  
         - **Visualization Tools:** Streamlit, Tableau, Power BI  
         - **Development & Version Control:** Jupyter Notebook, VS Code, Git, GitHub  
-        - **Deployment Platforms:** Streamlit Cloud, Google Colab, GitHub Pages  
+        - **Deployment Platforms:** Streamlit Cloud, IBM Cloud, Google Colab, GitHub Pages  
         - **APIs & Automation:** REST APIs, BeautifulSoup, Selenium, Requests  
         """)
     with col2:
@@ -232,3 +232,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
