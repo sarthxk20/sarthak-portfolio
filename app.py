@@ -128,28 +128,37 @@ def show_why_hire():
 def show_tech_and_skills():
     st.markdown("<h2 id='tech-stack-skills'>🧠 Tech Stack & 🧩 Core Skills</h2>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
+
     with col1:
         st.subheader("Tech Stack")
         st.write("""
         - **Programming Languages:** Python, SQL  
-        - **Data Science Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly  
-        - **Machine Learning:** Supervised & Unsupervised Learning, Model Deployment, Ensemble Methods (Random Forest, XGBoost), Model Evaluation  
+        - **Data Science Libraries:** Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Plotly  
+        - **Machine Learning:** Classification, Regression, Clustering, PCA, Ensemble Models (Random Forest, XGBoost), Model Evaluation  
+        - **Deep Learning:** TensorFlow, PyTorch (ANN, CNN, RNN, LSTM)  
+        - **NLP & GenAI:** Transformers (BERT, GPT), LLMs, Hugging Face, LangChain, Prompt Engineering  
+        - **Big Data:** Hadoop, Apache Spark  
+        - **Cloud & MLOps:** Azure Machine Learning (Azure ML), Docker, Streamlit Cloud  
         - **Visualization Tools:** Streamlit, Tableau, Power BI  
         - **Development & Version Control:** Jupyter Notebook, VS Code, Git, GitHub  
-        - **Deployment Platforms:** Streamlit Cloud, IBM Cloud, Google Colab, GitHub Pages  
         - **APIs & Automation:** REST APIs, BeautifulSoup, Selenium, Requests  
         """)
+
     with col2:
         st.subheader("Core Skills")
         st.write("""
         - Data Cleaning, Wrangling & Preprocessing  
-        - Exploratory Data Analysis (EDA) & Statistical Modeling  
-        - Machine Learning (Classification, Regression, Model Tuning)  
-        - Data Visualization & Dashboard Design  
-        - End-to-End ML Workflow & Deployment  
-        - Problem Solving, Critical Thinking, and Communication  
+        - Data Pipelines (ETL) & Feature Engineering  
+        - Exploratory Data Analysis (EDA) & Statistical Analysis  
+        - End-to-End Machine Learning Workflow  
+        - Deep Learning & NLP Workflow Design  
+        - Model Deployment & Real-Time Dashboards  
+        - Problem Solving, Analytical Thinking  
+        - Communication & Insight Explanation  
         """)
+
     st.markdown("<hr>", unsafe_allow_html=True)
+
 
 def show_certification():
     st.markdown("<h2 id='certification'>🎓 Certification</h2>", unsafe_allow_html=True)
@@ -232,4 +241,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
