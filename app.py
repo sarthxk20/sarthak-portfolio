@@ -76,6 +76,38 @@ and Streamlit**.
 
     st.markdown("---")
 
+st.header("🚀 Featured Project")
+st.subheader("Resume Screening System (ATS Simulation)")
+
+st.write(
+    """
+An AI-powered system that simulates core Applicant Tracking System (ATS)
+functionality by evaluating resumes against job descriptions using NLP
+and semantic similarity techniques.
+"""
+)
+
+st.markdown("**Highlights:**")
+st.markdown(
+    """
+- Resume–Job Description matching using TF-IDF and BERT
+- Semantic similarity scoring for contextual relevance
+- Skill gap and keyword coverage analysis
+- Explainable hiring decisions and screening insights
+"""
+)
+
+st.markdown(
+    "**Live App:** https://resume-screening-ai.streamlit.app"
+)
+
+st.markdown(
+    "**GitHub:** https://github.com/sarthxk20/resume-screening-ai"
+)
+
+st.markdown("---")
+
+
 def show_why_hire():
     st.header("Why Hire Me?")
     st.write(
@@ -180,6 +212,7 @@ def main():
         "About Me",
         "Contact",
         "Featured Project",
+        "Resume Screening Project",
         "Why Hire Me?",
         "Tech Stack & Skills",
         "Certification",
@@ -195,6 +228,7 @@ def main():
         show_about()
         show_contact()
         show_featured_project()
+        show_resume_screening_project()
         show_why_hire()
         show_tech_and_skills()
         show_certification()
@@ -207,6 +241,7 @@ def main():
             "About Me": show_about,
             "Contact": show_contact,
             "Featured Project": show_featured_project,
+            "Resume Screening Project": show_resume_screening_project,
             "Why Hire Me?": show_why_hire,
             "Tech Stack & Skills": show_tech_and_skills,
             "Certification": show_certification,
