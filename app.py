@@ -76,37 +76,46 @@ and Streamlit**.
 
     st.markdown("---")
 
-st.header("🚀 Featured Project")
-st.subheader("Resume Screening System (ATS Simulation)")
+def show_resume_screening_project():
+    st.header("🚀 Featured Project")
+    st.subheader("Resume Screening System (ATS Simulation)")
 
-st.write(
-    """
-An AI-powered system that simulates core Applicant Tracking System (ATS)
-functionality by evaluating resumes against job descriptions using NLP
-and semantic similarity techniques.
+    col1, col2 = st.columns([1, 2])
+
+    with col1:
+        img = Image.open("resume.png")
+        st.image(
+            img,
+            caption="Resume Screening System Interface",
+            use_container_width=True
+        )
+
+    with col2:
+        st.write(
+            """
+An AI-powered Applicant Tracking System (ATS) simulation that evaluates resumes
+against job descriptions using NLP techniques and semantic similarity models.
 """
-)
+        )
 
-st.markdown("**Highlights:**")
-st.markdown(
-    """
-- Resume–Job Description matching using TF-IDF and BERT
-- Semantic similarity scoring for contextual relevance
-- Skill gap and keyword coverage analysis
-- Explainable hiring decisions and screening insights
+        st.markdown("**Highlights:**")
+        st.markdown(
+            """
+- Resume–Job Description matching using TF-IDF and BERT  
+- Semantic similarity scoring for contextual relevance  
+- Skill gap and keyword coverage analysis  
+- Explainable screening decisions  
 """
-)
+        )
 
-st.markdown(
-    "**Live App:** https://resume-screening-ai.streamlit.app"
-)
+        st.markdown(
+            "**Live App:** https://resume-screening-ai.streamlit.app"
+        )
+        st.markdown(
+            "**GitHub:** https://github.com/sarthxk20/resume-screening-ai"
+        )
 
-st.markdown(
-    "**GitHub:** https://github.com/sarthxk20/resume-screening-ai"
-)
-
-st.markdown("---")
-
+    st.markdown("---")
 
 def show_why_hire():
     st.header("Why Hire Me?")
@@ -211,7 +220,7 @@ def main():
         "All",
         "About Me",
         "Contact",
-        "Featured Project",
+        "SpaceX Project",
         "Resume Screening Project",
         "Why Hire Me?",
         "Tech Stack & Skills",
@@ -240,7 +249,7 @@ def main():
         {
             "About Me": show_about,
             "Contact": show_contact,
-            "Featured Project": show_featured_project,
+            "SpaceX Project": show_featured_project,
             "Resume Screening Project": show_resume_screening_project,
             "Why Hire Me?": show_why_hire,
             "Tech Stack & Skills": show_tech_and_skills,
