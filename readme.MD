@@ -37,24 +37,32 @@ I transform complex datasets into actionable insights using **Python, SQL, and m
 ---
 
 ## Tech Stack & Tools
-**Languages:** Python, SQL  
 
-**Data Science & Machine Learning:**  
-Scikit-learn, NumPy, Pandas  
+### Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-**Visualization:**  
-Plotly, Seaborn  
+### Data Science & Machine Learning
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-**Dashboards & Apps:**  
-Streamlit, Tableau  
+### Visualization
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C9A2A?style=for-the-badge&logo=python&logoColor=white)
 
-**Development & Version Control:**  
-VS Code, GitHub  
+### Dashboards & Apps
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 
-**Deployment & Automation:**  
-Streamlit Cloud, Google Colab  
+### Development & Version Control
+![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
----
+### Deployment & Automation
+![Streamlit Cloud](https://img.shields.io/badge/Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
+
 
 ## Certification
 **IBM Data Science Professional Certificate**  
@@ -77,3 +85,4 @@ GitHub: https://github.com/sarthxk20
 ---
 
 © 2025 Sarthak Shandilya
+
