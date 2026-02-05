@@ -1,5 +1,4 @@
 import streamlit as st
-from PIL import Image
 
 # ---------- PAGE CONFIG ----------
 def set_page_config():
@@ -13,7 +12,7 @@ def set_page_config():
 def show_header():
     st.markdown("## Sarthak Shandilya")
     st.markdown(
-        "**Data Scientist | Python | SQL | Machine Learning | Data Analytics & Visualization | IBM Certified**"
+        "**Data Scientist | Python | SQL | Applied Machine Learning | Analytics & Visualization**"
     )
     st.markdown(
         "_Bridging data, intelligence, and action through meaningful insights._"
@@ -21,114 +20,140 @@ def show_header():
     st.markdown("---")
 
 def show_about():
-    st.header("👋 About Me")
+    st.header("About Me")
     st.write(
         """
-Hello! I’m **Sarthak Shandilya**, a Data Scientist skilled in **machine learning,
-statistical analysis**, and **end-to-end data application development**.
-I hold an **IBM Data Science Professional Certificate** and specialize in building
-scalable, data-driven solutions.
+Hello! I'm Sarthak Shandilya, a Data Scientist with a strong focus on machine learning,
+statistical modeling, and end-to-end data product development. I work on building scalable
+data pipelines, developing predictive models, and translating analytical outputs into
+decision-ready insights.
 
 **Core Focus Areas:**
-- Machine Learning Model Development
-- Exploratory Data Analysis (EDA)
-- Interactive Dashboards (Streamlit)
+- Machine Learning and Predictive Modeling
+- Statistical Analysis and Time-Series Forecasting
+- Feature Engineering and Data Pipelines
+- Interactive Data Applications and Dashboards (Streamlit)
 """
     )
     st.markdown("---")
 
+
 def show_contact():
-    st.header("📫 Contact")
+    st.header("Contact")
     st.write(
         """
-📧 **Email:** [sarthakshandilya9@gmail.com](mailto:sarthakshandilya9@gmail.com)  
-💼 **LinkedIn:** [linkedin.com/in/sarthxk20](https://linkedin.com/in/sarthxk20)  
-💻 **GitHub:** [github.com/sarthxk20](https://github.com/sarthxk20)
+ **Email:** [sarthakshandilya9@gmail.com](mailto:sarthakshandilya9@gmail.com)  
+ **LinkedIn:** [linkedin.com/in/sarthxk20](https://linkedin.com/in/sarthxk20)  
+ **GitHub:** [github.com/sarthxk20](https://github.com/sarthxk20)
 """
     )
     st.markdown("---")
 
 def show_featured_project():
-    st.header("🚀 Featured Project")
-    st.subheader("SpaceX Launch Analysis Dashboard")
+    st.header("Featured Projects")
 
-    col1, col2 = st.columns([1, 2])
+    # -------------------------------
+    # DemandIQ Project
+    # -------------------------------
+    st.subheader("DemandIQ - Retail Demand Forecasting & Risk Insights")
 
-    with col1:
-        img = Image.open("spacex_dashboard.png")
-        st.image(img, caption="SpaceX Dashboard", use_container_width=True)
-
-    with col2:
-        st.write(
-            """
-A data-driven dashboard exploring SpaceX launch trends using **Python, Plotly,
-and Streamlit**.
-
-**Highlights:**
-- SpaceX API Integration
-- Interactive Visualizations
-- Logistic Regression for Success Prediction
-- Streamlit Cloud Deployment
+    st.write(
+        """
+A production-grade retail demand forecasting and decision support system built on
+large-scale time-series data to support inventory planning and risk-aware decision-making.
 """
-        )
-        st.markdown("**Live App:** https://spacex-launch-dashboard.streamlit.app")
-        st.markdown("**GitHub:** https://github.com/sarthxk20/spacex-launch-dashboard")
+    )
+
+    st.markdown("**Highlights:**")
+    st.markdown(
+        """
+- Time-series forecasting system on 1M+ sales using Naive, ARIMA, SARIMA, and Prophet models  
+- Forecast error reduction of ~60% using seasonality-aware approaches  
+- Inventory planning ranges, demand risk estimation, and scenario simulation  
+- Anomaly detection using statistical residual analysis  
+- Optimized data pipeline using Parquet for scalable cloud deployment  
+- Deployed interactive decision dashboard using Streamlit and Plotly  
+"""
+    )
+
+    st.markdown("**Live App:** https://demandiq.streamlit.app")
+    st.markdown("**GitHub:** https://github.com/sarthxk20/DemandIQ")
 
     st.markdown("---")
 
-def show_resume_screening_project():
-    st.header("🚀 Featured Project")
+    # -------------------------------
+    # SpaceX Project
+    # -------------------------------
+    st.subheader("SpaceX Launch Dashboard")
+
+    st.write(
+        """
+A data-driven analytics dashboard exploring SpaceX launch performance and mission
+outcomes using historical launch data and predictive modeling.
+"""
+    )
+
+    st.markdown("**Highlights:**")
+    st.markdown(
+        """
+- Automated data ingestion using the SpaceX API  
+- Exploratory analysis of launch success trends
+- Built a machine learning-based launch success predictor to estimate the probability of successful missions  
+- Logistic regression model for launch success prediction  
+- Interactive visualizations using Plotly  
+- Deployed as a Streamlit application  
+"""
+    )
+  
+    st.markdown("**Live App:** https://spacex-launch-dashboard.streamlit.app")
+    st.markdown("**GitHub:** https://github.com/sarthxk20/spacex-launch-dashboard")
+
+    st.markdown("---")
+
+    # -------------------------------
+    # Resume Screening Project
+    # -------------------------------
     st.subheader("Resume Screening System (ATS Simulation)")
 
-    col1, col2 = st.columns([1, 2])
-
-    with col1:
-        img = Image.open("resume.png")
-        st.image(
-            img,
-            caption="Resume Screening System Interface",
-            use_container_width=True
-        )
-
-    with col2:
-        st.write(
-            """
-An AI-powered Applicant Tracking System (ATS) simulation that evaluates resumes
-against job descriptions using NLP techniques and semantic similarity models.
+    st.write(
+        """
+An NLP-based Applicant Tracking System (ATS) simulation designed to evaluate resume
+relevance against job descriptions using semantic similarity and explainable scoring.
 """
-        )
+    )
 
-        st.markdown("**Highlights:**")
-        st.markdown(
-            """
-- Resume–Job Description matching using TF-IDF and BERT  
+    st.markdown("**Highlights:**")
+    st.markdown(
+        """
+- Resume-job matching using TF-IDF and BERT embeddings  
 - Semantic similarity scoring for contextual relevance  
-- Skill gap and keyword coverage analysis  
-- Explainable screening decisions  
+- Explainable skill gap and keyword coverage analysis  
+- Reproducible inference and transparent evaluation logic  
+- Deployed as an interactive Streamlit application  
 """
-        )
+    )
 
-        st.markdown(
-            "**Live App:** https://resume-screening-ai.streamlit.app"
-        )
-        st.markdown(
-            "**GitHub:** https://github.com/sarthxk20/resume-screening-ai"
-        )
+    st.markdown("**Live App:** https://resume-screening-ai.streamlit.app")
+    st.markdown("**GitHub:** https://github.com/sarthxk20/resume-screening-ai")
 
     st.markdown("---")
+
 
 def show_why_hire():
     st.header("Why Hire Me?")
     st.write(
         """
-I deliver end-to-end data solutions — from raw data to fully deployed ML
-applications. I focus on clarity, scalability, and real-world impact.
+I build end-to-end data science solutions that go beyond modeling - from data
+ingestion and feature engineering to predictive modeling and production-ready
+deployment. My work emphasizes interpretable machine learning, scalable data
+pipelines, and translating complex analytical results into clear, actionable
+insights that support real business decisions.
 """
     )
     st.markdown("---")
 
 def show_tech_and_skills():
-    st.header("🧠 Tech Stack & Skills")
+    st.header("Tech Stack & Skills")
 
     col1, col2 = st.columns(2)
 
@@ -136,14 +161,16 @@ def show_tech_and_skills():
         st.subheader("Tech Stack")
         st.markdown(
             """
-- **Python**, **SQL**
-- Pandas, NumPy, Sklearn, Matplotlib, Seaborn, Plotly
-- TensorFlow, PyTorch (ANN, CNN, RNN, LSTM)
-- NLP: BERT, GPT, HuggingFace, LangChain
-- Big Data: Hadoop, Apache Spark
-- Azure ML, Docker, Streamlit Cloud
-- Tableau, Power BI
-- Git, GitHub, VS Code
+- **Programming:** Python, SQL  
+- **Data Analysis:** Pandas, NumPy, Statsmodels  
+- **Machine Learning:** Scikit-learn, Prophet  
+- **Deep Learning:** TensorFlow, PyTorch (ANN, CNN, RNN, LSTM)  
+- **NLP:** TF-IDF, BERT, Hugging Face  
+- **Visualization:** Plotly, Matplotlib, Seaborn  
+- **Data Apps & Deployment:** Streamlit, Streamlit Cloud  
+- **Big Data & Tools:** Apache Spark, Hadoop  
+- **BI & Reporting:** Tableau, Power BI  
+- **Version Control & Dev Tools:** Git, GitHub, VS Code  
 """
         )
 
@@ -151,44 +178,56 @@ def show_tech_and_skills():
         st.subheader("Core Skills")
         st.markdown(
             """
-- Data Cleaning & Preprocessing
-- ETL & Feature Engineering
-- EDA & Statistical Analysis
-- End-to-End ML Pipelines
-- Deep Learning & NLP
-- Deployment & Dashboards
-- Analytical Problem Solving
+- Data Cleaning, Preprocessing, and Validation  
+- Exploratory Data Analysis and Statistical Insights  
+- Feature Engineering and ETL Pipelines  
+- Time-Series Forecasting and Predictive Modeling  
+- NLP and Semantic Similarity Modeling  
+- Model Evaluation and Performance Optimization  
+- End-to-End ML Pipelines and Deployment  
+- Business-Focused Analytics and Decision Support  
 """
         )
 
     st.markdown("---")
 
 def show_certification():
-    st.header("🎓 Certification")
+    st.header("Certifications")
 
-    col1, col2 = st.columns([1, 3])
+    st.markdown(
+        """
+**Applied Data Science Lab - WorldQuant University**  
+- Applied machine learning techniques to real-world datasets  
+- Focused on model evaluation, validation, and data-driven decision-making  
+- Worked with unstructured data and databases such as MongoDB  
 
-    with col1:
-        cert = Image.open("certificate.png")
-        st.image(cert, caption="IBM Certificate", use_container_width=True)
+**Data Science Professional Certificate - IBM**  
+- Completed an industry-aligned data science curriculum with hands-on labs and capstone projects  
+- Covered Python, SQL, statistical analysis, machine learning, APIs, and data visualization  
+- Built end-to-end data science workflows from data ingestion to model deployment  
 
-    with col2:
-        st.write(
-            """
-**IBM Data Science Professional Certificate**  
-Issued via Coursera  
-Credential ID: 4UGBZJCVM3HZ
+**Machine Learning & AI with Python - HarvardX (edX)**  
+- Implemented and evaluated supervised learning models in Python  
+- Gained hands-on experience with ensemble methods including Bagging, Random Forests, Gradient Boosting, and AdaBoost  
+- Developed an understanding of bias-variance trade-offs and metric-driven model selection  
 """
-        )
+    )
 
     st.markdown("---")
 
 def show_resume():
-    st.header("📄 Resume")
+    st.header("Resume")
+
+    st.write(
+        """
+Download my resume to learn more about my experience, projects, and technical background
+in data science, machine learning, and analytics.
+"""
+    )
 
     with open("sarthak_shandilya_resume.pdf", "rb") as file:
         st.download_button(
-            label="Download Resume",
+            label="Download Resume (PDF)",
             data=file,
             file_name="Sarthak_Shandilya_Resume.pdf",
             mime="application/pdf",
@@ -196,19 +235,38 @@ def show_resume():
 
     st.markdown("---")
 
+
 def show_personal():
-    st.header("💬 Personal")
+    st.header("Personal")
 
     with st.expander("Why Data Science?"):
-        st.write("I love turning complex data into meaningful insights.")
+        st.write(
+            """
+I enjoy solving real-world problems using data - from uncovering hidden patterns
+to building models that support better decisions. Data science lets me combine
+analytical thinking with practical impact.
+"""
+        )
 
     with st.expander("Fun Fact"):
-        st.write("I analyze my gameplay stats using ML for fun!")
+        st.write(
+            """
+I experiment with machine learning on my own datasets, including analyzing gameplay
+and performance statistics to understand patterns and improve outcomes.
+"""
+        )
 
     st.markdown("---")
 
+
 def show_footer():
-    st.markdown("© 2025 Sarthak Shandilya")
+    st.markdown(
+        """
+(c) 2026 Sarthak Shandilya  
+Built with Python, Streamlit, and Plotly
+"""
+    )
+
 
 # ---------- SIDEBAR NAV ----------
 def main():
@@ -216,28 +274,26 @@ def main():
 
     st.sidebar.header("Navigate")
 
-    pages = [
-        "All",
-        "About Me",
-        "Contact",
-        "SpaceX Project",
-        "Resume Screening Project",
-        "Why Hire Me?",
-        "Tech Stack & Skills",
-        "Certification",
-        "Resume",
-        "Personal",
-        "Footer",
-    ]
+    page_map = {
+        "All": None,
+        "About Me": show_about,
+        "Contact": show_contact,
+        "Projects": show_featured_project,
+        "Why Hire Me?": show_why_hire,
+        "Tech Stack & Skills": show_tech_and_skills,
+        "Certifications": show_certification,
+        "Resume": show_resume,
+        "Personal": show_personal,
+    }
 
-    choice = st.sidebar.radio("", pages)
+    choice = st.sidebar.radio("", list(page_map.keys()))
+
+    show_header()
 
     if choice == "All":
-        show_header()
         show_about()
         show_contact()
         show_featured_project()
-        show_resume_screening_project()
         show_why_hire()
         show_tech_and_skills()
         show_certification()
@@ -245,19 +301,7 @@ def main():
         show_personal()
         show_footer()
     else:
-        show_header()
-        {
-            "About Me": show_about,
-            "Contact": show_contact,
-            "SpaceX Project": show_featured_project,
-            "Resume Screening Project": show_resume_screening_project,
-            "Why Hire Me?": show_why_hire,
-            "Tech Stack & Skills": show_tech_and_skills,
-            "Certification": show_certification,
-            "Resume": show_resume,
-            "Personal": show_personal,
-            "Footer": show_footer,
-        }[choice]()
+        page_map[choice]()
 
 if __name__ == "__main__":
     main()
