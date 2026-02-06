@@ -161,7 +161,7 @@ def show_tech_and_skills():
         st.subheader("Tech Stack")
         st.markdown(
             """
-- **Programming:** Python, SQL  
+- **Programming:** Python, SQL, R
 - **Data Analysis:** Pandas, NumPy, Statsmodels  
 - **Machine Learning:** Scikit-learn, Prophet  
 - **Deep Learning:** TensorFlow, PyTorch (ANN, CNN, RNN, LSTM)  
@@ -305,3 +305,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
