@@ -1,89 +1,101 @@
-# Sarthak Shandilya — Data Science Portfolio
+# Sarthak Shandilya — Data Science & ML Portfolio
 
-Bridging data, intelligence, and action through meaningful insights.
-
----
-
-## About Me
-I’m **Sarthak Shandilya**, an **IBM Certified Data Scientist** skilled in machine learning, data visualization, and end-to-end deployment.  
-I transform complex datasets into actionable insights using **Python, SQL, and modern ML frameworks**, building analytical systems that drive real-world impact.
+> Building intelligent systems that transform data into measurable impact.
 
 ---
 
-## Featured Project — SpaceX Launch Analysis Dashboard
-**Live App:** https://spacex-launch-dashboard.streamlit.app  
-**GitHub Repo:** https://github.com/sarthxk20/spacex-launch-dashboard  
+## About
 
-**Project Highlights:**
-- Integrated SpaceX API and external datasets for complete launch history
-- Performed EDA and feature engineering to uncover mission success patterns
-- Built and evaluated predictive models using Logistic Regression
-- Developed an interactive Streamlit dashboard with Plotly and Seaborn
-- Deployed the full pipeline using Streamlit Cloud
+I'm a **Data Scientist and Machine Learning Engineer** with hands-on experience building end-to-end analytical and AI-powered systems — from data ingestion through to production deployment. I specialise in machine learning, NLP, and predictive modelling, and hold certifications from IBM, HarvardX, and WorldQuant University.
 
 ---
 
-## Featured Project — Resume Screening System (ATS Simulation)
-**Live App:** https://resume-screening-ai.streamlit.app  
-**GitHub Repo:** https://github.com/sarthxk20/resume-screening-ai  
+## Projects
 
-**Project Highlights:**
-- Built an AI-powered Applicant Tracking System (ATS) simulation to evaluate resumes against job descriptions
-- Implemented TF-IDF keyword matching and BERT-based semantic similarity for robust resume–job alignment
-- Designed skill gap and keyword coverage analysis to identify missing competencies
-- Generated explainable screening insights to support transparent hiring decisions
-- Deployed as a cloud-ready Streamlit application with reproducible NLP workflows
+### PortIQ — AI Portfolio Analyser
+**[Live App](https://portiq.streamlit.app/) · [GitHub](https://github.com/sarthxk20/PortIQ)**
+
+**Problem:** Retail investors lack accessible tools to objectively evaluate portfolio composition, risk exposure, and alignment with financial goals.  
+**Approach:** Built an AI-powered analysis engine that processes holdings data, applies ML-based risk scoring, and generates plain-language investment insights using NLP.  
+**Result:** A live Streamlit application delivering personalised portfolio diagnostics, sector breakdowns, and actionable recommendations.
 
 ---
 
-## Tech Stack & Tools
+### DemandIQ — Demand Forecasting Engine
+**[Live App](https://demandiq.streamlit.app/) · [GitHub](https://github.com/sarthxk20/DemandIQ)**
 
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-### Data Science & Machine Learning
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-
-### Visualization
-![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C9A2A?style=for-the-badge&logo=python&logoColor=white)
-
-### Dashboards & Apps
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-
-### Development & Version Control
-![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-
-### Deployment & Automation
-![Streamlit Cloud](https://img.shields.io/badge/Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
-
-
-## Certification
-**IBM Data Science Professional Certificate**  
-Issued by Coursera  
-Credential: https://www.coursera.org/account/accomplishments/professional-cert/4UGBZJCVM3HZ
+**Problem:** Businesses without accurate demand forecasts face chronic inventory imbalances — excess stock or costly shortfalls.  
+**Approach:** Developed a forecasting system using time-series modelling and machine learning to predict future demand across product categories, with configurable horizons and confidence intervals.  
+**Result:** A deployed dashboard enabling businesses to simulate demand scenarios and plan inventory with data-backed confidence.
 
 ---
 
-## Why Hire Me
-I combine strong data science fundamentals with practical engineering to deliver solutions that move from raw data to production-ready insights.  
-My work emphasizes clarity, scalability, and real-world applicability.
+### SpaceX Launch Analysis Dashboard
+**[Live App](https://spacex-launch-dashboard.streamlit.app) · [GitHub](https://github.com/sarthxk20/spacex-launch-dashboard)**
+
+**Problem:** SpaceX's reusable rocket programme generates rich launch data, but no accessible tool existed to explore mission success patterns interactively.  
+**Approach:** Integrated the SpaceX REST API, performed feature engineering, and trained a Logistic Regression classifier to predict first-stage landing success.  
+**Result:** An interactive Streamlit dashboard with Plotly visualisations enabling drill-down by orbit type, payload mass, and launch site.
 
 ---
 
-## Connect with Me
-Email: sarthakshandilya9@gmail.com  
-LinkedIn: https://www.linkedin.com/in/sarthxk20  
-GitHub: https://github.com/sarthxk20  
+### Resume Screening System (ATS Simulation)
+**[Live App](https://resume-screening-ai.streamlit.app) · [GitHub](https://github.com/sarthxk20/resume-screening-ai)**
+
+**Problem:** Manual resume screening is slow and inconsistent, causing strong candidates to be overlooked due to keyword mismatch.  
+**Approach:** Combined TF-IDF keyword matching with BERT-based semantic similarity to score resume–job description alignment, with skill-gap analysis to surface missing competencies.  
+**Result:** A cloud-deployed ATS simulation generating explainable screening reports for faster, more consistent hiring decisions.
 
 ---
 
-© 2026 Sarthak Shandilya
+## Tech Stack
 
+| Category | Tools |
+|---|---|
+| Languages | Python, SQL |
+| ML & Data Science | Scikit-Learn, Pandas, NumPy, BERT / NLP |
+| Visualisation | Plotly, Seaborn, Tableau |
+| Deployment & Tools | Streamlit Cloud, GitHub, Google Colab, VS Code |
 
+---
+
+## Certifications
+
+- **Data Science Professional Certificate** — IBM
+- **Machine Learning & AI with Python** — HarvardX (edX)
+- **Applied Data Science Lab** — WorldQuant University
+
+---
+
+## Running Locally
+
+```bash
+git clone https://github.com/sarthxk20/portfolio
+cd portfolio
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
+
+## Project Structure
+
+```
+portfolio/
+├── app.py           # Routing only
+├── components.py    # All UI rendering
+├── config.py        # All content — edit this to update the site
+└── requirements.txt
+```
+
+---
+
+## Connect
+
+- Email: sarthakshandilya9@gmail.com
+- LinkedIn: [linkedin.com/in/sarthxk20](https://www.linkedin.com/in/sarthxk20)
+- GitHub: [github.com/sarthxk20](https://github.com/sarthxk20)
+
+---
+
+© Sarthak Shandilya
