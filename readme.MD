@@ -39,15 +39,6 @@ I'm a **Data Scientist and Machine Learning Engineer** with hands-on experience 
 
 ---
 
-### Resume Screening System (ATS Simulation)
-**[Live App](https://resume-screening-ai.streamlit.app) · [GitHub](https://github.com/sarthxk20/resume-screening-ai)**
-
-**Problem:** Manual resume screening is slow and inconsistent, causing strong candidates to be overlooked due to keyword mismatch.  
-**Approach:** Combined TF-IDF keyword matching with BERT-based semantic similarity to score resume–job description alignment, with skill-gap analysis to surface missing competencies.  
-**Result:** A cloud-deployed ATS simulation generating explainable screening reports for faster, more consistent hiring decisions.
-
----
-
 ## Tech Stack
 
 | Category | Tools |
