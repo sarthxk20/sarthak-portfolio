@@ -89,4 +89,4 @@ portfolio/
 
 ---
 
-© Sarthak Shandilya
+© 2026 Sarthak Shandilya
