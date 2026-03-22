@@ -424,29 +424,34 @@ def render_about() -> None:
 
 
 def render_projects() -> None:
-    cards_html = ""
-    for p in PROJECTS:
-        highlights = "".join(f"<li>{h}</li>" for h in p["highlights"])
-        cards_html += f"""
-        <div class="project-card" style="--accent-color:{p['badge_color']}">
-            <div class="project-title">{p["title"]}</div>
-            <div class="project-tag">{p["tag"]}</div>
-            <div class="psa-grid">
-                <div class="psa-block"><div class="psa-label">Problem</div><div class="psa-text">{p["problem"]}</div></div>
-                <div class="psa-block"><div class="psa-label">Approach</div><div class="psa-text">{p["approach"]}</div></div>
-                <div class="psa-block"><div class="psa-label">Result</div><div class="psa-text">{p["result"]}</div></div>
-            </div>
-            <ul class="project-highlights">{highlights}</ul>
-            <div class="project-links">
-                <a class="project-link" href="{p['live_url']}" target="_blank">Live App</a>
-                <a class="project-link" href="{p['github_url']}" target="_blank">GitHub</a>
-            </div>
-        </div>
-        """
+    # Section header
     st.markdown(
-        f'<div class="section-label">// 02 · WORK</div><div class="section-title">Projects</div>{cards_html}<hr class="divider" />',
+        '<div class="section-label">// 02 · WORK</div><div class="section-title">Projects</div>',
         unsafe_allow_html=True,
     )
+    # Each card in its own st.markdown call to avoid Streamlit's HTML truncation limit
+    for p in PROJECTS:
+        highlights = "".join(f"<li>{h}</li>" for h in p["highlights"])
+        st.markdown(
+            f"""
+            <div class="project-card" style="--accent-color:{p['badge_color']}">
+                <div class="project-title">{p["title"]}</div>
+                <div class="project-tag">{p["tag"]}</div>
+                <div class="psa-grid">
+                    <div class="psa-block"><div class="psa-label">Problem</div><div class="psa-text">{p["problem"]}</div></div>
+                    <div class="psa-block"><div class="psa-label">Approach</div><div class="psa-text">{p["approach"]}</div></div>
+                    <div class="psa-block"><div class="psa-label">Result</div><div class="psa-text">{p["result"]}</div></div>
+                </div>
+                <ul class="project-highlights">{highlights}</ul>
+                <div class="project-links">
+                    <a class="project-link" href="{p['live_url']}" target="_blank">Live App</a>
+                    <a class="project-link" href="{p['github_url']}" target="_blank">GitHub</a>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    st.markdown('<hr class="divider" />', unsafe_allow_html=True)
 
 
 def render_skills() -> None:
