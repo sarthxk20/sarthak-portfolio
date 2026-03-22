@@ -1,7 +1,8 @@
 # app.py — Sarthak Shandilya · Data Science & ML Portfolio
+
 from __future__ import annotations
 
-import requests
+
 from collections.abc import Callable
 
 import streamlit as st
@@ -28,9 +29,6 @@ PERSONAL = {
     "email": "sarthakshandilya9@gmail.com",
     "linkedin": "https://www.linkedin.com/in/sarthxk20",
     "github": "https://github.com/sarthxk20",
-    # To add your resume: upload resume.pdf to your portfolio GitHub repo, then set this to:
-    # "https://raw.githubusercontent.com/sarthxk20/<your-portfolio-repo>/main/resume.pdf"
-    "resume_url": "",
     "location": "India",
 }
 
@@ -370,11 +368,6 @@ def load_css() -> None:
 
 def render_header() -> None:
     p = PERSONAL
-    resume_btn = (
-        f'<a class="cta-btn cta-secondary" href="{p["resume_url"]}" target="_blank">Resume</a>'
-        if p.get("resume_url", "").strip()
-        else ""
-    )
     st.markdown(
         f"""
         <div class="hero-wrap">
@@ -391,7 +384,7 @@ def render_header() -> None:
                 <a class="cta-btn cta-primary" href="mailto:{p['email']}">Contact Me</a>
                 <a class="cta-btn cta-secondary" href="{p['github']}" target="_blank">GitHub</a>
                 <a class="cta-btn cta-secondary" href="{p['linkedin']}" target="_blank">LinkedIn</a>
-                {resume_btn}
+
             </div>
         </div>
         <hr class="divider" />
@@ -502,27 +495,18 @@ def render_resume() -> None:
         "A full summary of my experience, projects, skills, and certifications.</p>",
         unsafe_allow_html=True,
     )
-    resume_url = PERSONAL.get("resume_url", "").strip()
-    if resume_url:
-        try:
-            response = requests.get(resume_url, timeout=10)
-            response.raise_for_status()
+    try:
+        with open("resume.pdf", "rb") as f:
             st.download_button(
                 label="Download Resume (PDF)",
-                data=response.content,
+                data=f.read(),
                 file_name="Sarthak_Shandilya_Resume.pdf",
                 mime="application/pdf",
             )
-        except Exception:
-            st.markdown(
-                f'<a class="cta-btn cta-primary" href="{resume_url}" target="_blank">Download Resume (PDF)</a>',
-                unsafe_allow_html=True,
-            )
-    else:
+    except FileNotFoundError:
         st.markdown(
             '<p style="color:var(--muted);font-family:var(--mono);font-size:0.78rem;">'
-            "Resume not yet configured. Upload resume.pdf to your GitHub repo and update "
-            "PERSONAL['resume_url'] at the top of app.py.</p>",
+            "resume.pdf not found. Make sure it is in the same folder as app.py.</p>",
             unsafe_allow_html=True,
         )
     st.markdown('<hr class="divider" />', unsafe_allow_html=True)
