@@ -1,6 +1,4 @@
 # app.py — Sarthak Shandilya · Data Science & ML Portfolio
-# Single-file Streamlit portfolio. Edit the CONTENT section below to update anything.
-
 from __future__ import annotations
 
 import requests
