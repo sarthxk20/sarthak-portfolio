@@ -2,15 +2,11 @@
 
 from __future__ import annotations
 
-
 from collections.abc import Callable
 
 import streamlit as st
 
-
-# ══════════════════════════════════════════════════════════════════════════════
-# CONTENT — Edit this section to update your portfolio
-# ══════════════════════════════════════════════════════════════════════════════
+# CONTENT
 
 PERSONAL = {
     "name": "Sarthak Shandilya",
@@ -30,8 +26,6 @@ PERSONAL = {
     "email": "sarthakshandilya9@gmail.com",
     "linkedin": "https://www.linkedin.com/in/sarthxk20",
     "github": "https://github.com/sarthxk20",
-    # To add your resume: upload resume.pdf to your portfolio GitHub repo, then set this to:
-    # "https://raw.githubusercontent.com/sarthxk20/<your-portfolio-repo>/main/resume.pdf"
     "location": "India",
 }
 
@@ -198,7 +192,7 @@ WHY_HIRE = [
         "body": (
             "From time-series forecasting and NLP to classification and financial "
             "modelling, I have applied machine learning across diverse domains — "
-            "with three deployed projects to demonstrate it."
+            "with nine deployed projects to demonstrate it."
         ),
     },
     {
@@ -237,10 +231,7 @@ PERSONAL_SECTION = {
     ],
 }
 
-
-# ══════════════════════════════════════════════════════════════════════════════
 # STYLES
-# ══════════════════════════════════════════════════════════════════════════════
 
 def load_css() -> None:
     st.markdown(
@@ -376,15 +367,32 @@ def load_css() -> None:
         .interest-chip:hover { border-color: var(--gold); }
 
         .footer { text-align: center; padding: 2rem 0 1rem; font-family: var(--mono); font-size: 0.65rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 3rem; letter-spacing: 0.08em; }
+
+        /* Style st.link_button to match portfolio dark theme */
+        [data-testid="stLinkButton"] a {
+            background: transparent !important;
+            color: var(--text) !important;
+            border: 2px solid var(--border) !important;
+            border-radius: var(--radius) !important;
+            font-family: var(--mono) !important;
+            font-size: 0.78rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.05em !important;
+            padding: 0.55rem 1.2rem !important;
+            transition: all 0.2s ease !important;
+            text-decoration: none !important;
+        }
+        [data-testid="stLinkButton"] a:hover {
+            border-color: var(--accent) !important;
+            color: var(--accent) !important;
+        }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 # RENDER FUNCTIONS
-# ══════════════════════════════════════════════════════════════════════════════
 
 def render_header() -> None:
     p = PERSONAL
@@ -472,7 +480,10 @@ def render_projects() -> None:
 
 
 def render_skills() -> None:
-    groups_html = ""
+    st.markdown(
+        '<div class="section-label">// 03 · STACK</div><div class="section-title">Tech Stack</div>',
+        unsafe_allow_html=True,
+    )
     for group, items in SKILLS.items():
         rows = "".join(
             f'<div class="skill-row"><div class="skill-name">{s["name"]}</div>'
@@ -480,37 +491,41 @@ def render_skills() -> None:
             f'<div class="skill-pct">{s["level"]}%</div></div>'
             for s in items
         )
-        groups_html += f'<div class="skills-group"><div class="skills-group-title">{group}</div>{rows}</div>'
-    st.markdown(
-        f'<div class="section-label">// 03 · STACK</div><div class="section-title">Tech Stack</div>{groups_html}<hr class="divider" />',
-        unsafe_allow_html=True,
-    )
+        st.markdown(
+            f'<div class="skills-group"><div class="skills-group-title">{group}</div>{rows}</div>',
+            unsafe_allow_html=True,
+        )
+    st.markdown('<hr class="divider" />', unsafe_allow_html=True)
 
 
 def render_certifications() -> None:
-    cards_html = "".join(
-        f'<div class="cert-card"><div class="cert-title">{c["title"]}</div>'
-        f'<div class="cert-meta">{c["issuer"]} · {c["year"]}</div>'
-        f'<div class="cert-desc">{c["description"]}</div></div>'
-        for c in CERTIFICATIONS
-    )
     st.markdown(
-        f'<div class="section-label">// 04 · CREDENTIALS</div><div class="section-title">Certifications</div>{cards_html}<hr class="divider" />',
+        '<div class="section-label">// 04 · CREDENTIALS</div><div class="section-title">Certifications</div>',
         unsafe_allow_html=True,
     )
+    for c in CERTIFICATIONS:
+        st.markdown(
+            f'<div class="cert-card"><div class="cert-title">{c["title"]}</div>'
+            f'<div class="cert-meta">{c["issuer"]} · {c["year"]}</div>'
+            f'<div class="cert-desc">{c["description"]}</div></div>',
+            unsafe_allow_html=True,
+        )
+    st.markdown('<hr class="divider" />', unsafe_allow_html=True)
 
 
 def render_why_hire() -> None:
-    cards_html = "".join(
-        f'<div class="why-card"><div class="why-icon">{w["icon"]}</div>'
-        f'<div class="why-heading">{w["heading"]}</div><div class="why-body">{w["body"]}</div></div>'
-        for w in WHY_HIRE
-    )
     st.markdown(
-        f'<div class="section-label">// 05 · VALUE</div><div class="section-title">Why Hire Me?</div>'
-        f'<div class="why-grid">{cards_html}</div><hr class="divider" />',
+        '<div class="section-label">// 05 · VALUE</div><div class="section-title">Why Hire Me?</div>'
+        '<div class="why-grid">',
         unsafe_allow_html=True,
     )
+    for w in WHY_HIRE:
+        st.markdown(
+            f'<div class="why-card"><div class="why-icon">{w["icon"]}</div>'
+            f'<div class="why-heading">{w["heading"]}</div><div class="why-body">{w["body"]}</div></div>',
+            unsafe_allow_html=True,
+        )
+    st.markdown('</div><hr class="divider" />', unsafe_allow_html=True)
 
 
 def render_resume() -> None:
@@ -589,9 +604,8 @@ def render_footer() -> None:
     )
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 # ROUTING
-# ══════════════════════════════════════════════════════════════════════════════
+
 
 PAGES: dict[str, Callable[[], None] | None] = {
     "All":            None,
@@ -609,7 +623,7 @@ PAGES: dict[str, Callable[[], None] | None] = {
 def main() -> None:
     st.set_page_config(
         page_title="Sarthak Shandilya | Data Scientist & ML Engineer",
-        page_icon="🔬",
+        page_icon=None,
         layout="wide",
         initial_sidebar_state="auto",
     )
