@@ -276,14 +276,20 @@ def load_css() -> None:
             border-right: 1px solid var(--border) !important;
         }
         [data-testid="stSidebar"] * { color: var(--text) !important; }
-        /* Radio dot — target the SVG and filled circle Streamlit renders */
-        [data-testid="stSidebar"] [role="radio"] svg { fill: var(--accent) !important; }
-        [data-testid="stSidebar"] [role="radio"] [data-checked="true"] { color: var(--accent) !important; }
-        div[data-baseweb="radio"] div div { border-color: var(--accent) !important; }
-        div[data-baseweb="radio"] [data-checked="true"] div { background-color: var(--accent) !important; border-color: var(--accent) !important; }
-        /* Fallback: colour any visible circle in the sidebar */
-        [data-testid="stSidebar"] span[data-baseweb="radio"] > div { border-color: var(--accent) !important; }
-        [data-testid="stSidebar"] span[data-baseweb="radio"] > div > div { background: var(--accent) !important; }
+        /* Hide the radio dot entirely — cleaner than trying to recolor it */
+        [data-testid="stSidebar"] div[data-baseweb="radio"] > label > div:first-child { display: none !important; }
+        /* Style selected item label with accent colour and left bar instead */
+        [data-testid="stSidebar"] div[data-baseweb="radio"] > label {
+            padding-left: 0.75rem !important;
+            border-left: 2px solid transparent;
+            transition: all 0.15s;
+        }
+        [data-testid="stSidebar"] div[data-baseweb="radio"][data-checked="true"] > label,
+        [data-testid="stSidebar"] div[data-baseweb="radio"] > label[aria-checked="true"] {
+            border-left: 2px solid var(--accent) !important;
+            color: var(--accent) !important;
+        }
+        [data-testid="stSidebar"] div[data-baseweb="radio"] > label > div:last-child { color: inherit !important; }
         .nav-header {
             font-family: var(--mono);
             font-size: 0.7rem;
@@ -396,8 +402,8 @@ def render_header() -> None:
                 <span class="badge badge-outline">{p["location"]}</span>
                 <span class="badge badge-outline">Open to Work</span>
             </div>
-            <div style="font-family:var(--mono);font-size:0.78rem;color:var(--text);margin-top:1rem;letter-spacing:0.06em;opacity:0.85;">
-                {p["email"]}
+            <div style="margin-top:1rem;">
+                <a href="mailto:{p['email']}" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.72rem;color:var(--accent);border:1px solid var(--accent);padding:0.35rem 0.9rem;border-radius:999px;letter-spacing:0.05em;text-decoration:none;">{p["email"]}</a>
             </div>
         </div>
         """,
