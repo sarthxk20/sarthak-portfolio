@@ -1,4 +1,5 @@
 # app.py — Sarthak Shandilya · Data Science & ML Portfolio
+# Single-file Streamlit portfolio. Edit the CONTENT section below to update anything.
 
 from __future__ import annotations
 
@@ -21,22 +22,25 @@ PERSONAL = {
         "end-to-end analytical and AI-powered systems — from data ingestion through to "
         "production deployment. I specialise in machine learning, NLP, and predictive "
         "modelling, and hold certifications from IBM, HarvardX, and WorldQuant University. "
-        "I believe rigorous methodology and clear communication are what separate a good "
-        "model from a useful one."
+        "I am particularly interested in roles at tech, fintech, and e-commerce companies "
+        "where data and ML directly shape product decisions and business outcomes — whether "
+        "that is at a high-growth startup or within an analytics team at scale."
     ),
     "currently_learning": "MLflow, Docker, and building reproducible ML pipelines",
-    "open_to": "Full-time Data Scientist or Machine Learning Engineer roles",
+    "open_to": "Data Scientist · ML Engineer · Analytics — tech, fintech, and e-commerce",
     "email": "sarthakshandilya9@gmail.com",
     "linkedin": "https://www.linkedin.com/in/sarthxk20",
     "github": "https://github.com/sarthxk20",
+    # To add your resume: upload resume.pdf to your portfolio GitHub repo, then set this to:
+    # "https://raw.githubusercontent.com/sarthxk20/<your-portfolio-repo>/main/resume.pdf"
     "location": "India",
 }
 
 STATS = [
-    {"value": "3+", "label": "Projects Deployed"},
+    {"value": "3",  "label": "Projects Deployed"},
     {"value": "3",  "label": "Certifications"},
-    {"value": "5+", "label": "ML Algorithms Used"},
-    {"value": "3+", "label": "Visualization Tools"},
+    {"value": "27", "label": "Features Engineered"},
+    {"value": "0.97", "label": "Best Model AUC"},
 ]
 
 PROJECTS = [
