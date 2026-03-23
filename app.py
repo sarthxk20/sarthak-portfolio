@@ -45,28 +45,29 @@ STATS = [
 
 PROJECTS = [
     {
-        "title": "PortIQ — AI Portfolio Analyser",
-        "tag": "Machine Learning · NLP · Financial Analysis · Streamlit",
+        "title": "PortIQ — GTM Opportunity Scoring Platform",
+        "tag": "Machine Learning · Random Forest · AIS Data · Streamlit",
         "problem": (
-            "Retail investors lack accessible tools to objectively evaluate portfolio "
-            "composition, risk exposure, and alignment with financial goals."
+            "SaaS GTM teams targeting the container shipping industry have no systematic "
+            "way to identify, score, and prioritise which companies are the strongest "
+            "prospects — leading to wasted outreach and missed opportunities."
         ),
         "approach": (
-            "Built an ML pipeline over 1,200 data points across 180 companies, engineering "
-            "27 features including pain scores, digital readiness, and deal-size potential. "
-            "Trained a Random Forest classifier with 5-fold cross-validation for robust scoring."
+            "Built an end-to-end ML pipeline over 1,200 AIS vessel data points across "
+            "180 companies, engineering 27 GTM-relevant features including visibility pain "
+            "scores, digital readiness, and deal-size potential. Trained a Random Forest "
+            "classifier with 5-fold cross-validation to score each prospect."
         ),
         "result": (
             "Achieved AUC ~0.97 on the scoring model. Deployed a live Streamlit dashboard "
-            "delivering portfolio diagnostics, sector breakdowns, and tiered prospect rankings — "
-            "turning analysis that would take a financial analyst hours into an instant, "
-            "data-backed decision."
+            "with tiered prospect rankings (S-Priority to C-Watch) and TAM/SAM/SOM market "
+            "sizing — turning hours of manual prospecting into an instant, data-driven shortlist."
         ),
         "highlights": [
             "Random Forest classifier · AUC ~0.97 (5-fold CV)",
-            "27 engineered features across 180 companies",
+            "27 engineered features across 180 companies · 1,200 AIS data points",
             "TAM / SAM / SOM market sizing built into the pipeline",
-            "Deployed on Streamlit Cloud with real-time scoring",
+            "Tiered prospect scoring: S-Priority · A-Pursue · B-Nurture · C-Watch",
         ],
         "live_url": "https://portiq.streamlit.app/",
         "github_url": "https://github.com/sarthxk20/PortIQ",
