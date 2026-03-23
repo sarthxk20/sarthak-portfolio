@@ -58,7 +58,9 @@ PROJECTS = [
         ),
         "result": (
             "Achieved AUC ~0.97 on the scoring model. Deployed a live Streamlit dashboard "
-            "delivering portfolio diagnostics, sector breakdowns, and tiered prospect rankings."
+            "delivering portfolio diagnostics, sector breakdowns, and tiered prospect rankings — "
+            "turning analysis that would take a financial analyst hours into an instant, "
+            "data-backed decision."
         ),
         "highlights": [
             "Random Forest classifier · AUC ~0.97 (5-fold CV)",
@@ -83,9 +85,9 @@ PROJECTS = [
             "the best performer, then added confidence intervals and anomaly detection."
         ),
         "result": (
-            "A deployed 14-day forecasting dashboard enabling scenario simulation, "
-            "inventory planning, and automated plain-language business insights — "
-            "built for non-technical decision-makers."
+            "A deployed 14-day forecasting dashboard enabling scenario simulation and "
+            "inventory planning — addressing a problem that costs retailers an estimated "
+            "12% of annual revenue through overstock and stockouts."
         ),
         "highlights": [
             "14-day demand forecasts with confidence interval modelling",
@@ -110,9 +112,9 @@ PROJECTS = [
             "modelling. Trained a Logistic Regression classifier on launch parameters."
         ),
         "result": (
-            "An interactive Streamlit dashboard with Plotly visualisations covering "
-            "mission success rates, rocket reliability, and launchpad performance — "
-            "with a live ML-powered success predictor."
+            "An interactive Streamlit dashboard with a live ML-powered success predictor — "
+            "demonstrating how predictive modelling can surface actionable patterns from "
+            "complex, multi-source datasets that no manual analysis could replicate at scale."
         ),
         "highlights": [
             "Logistic Regression launch success predictor",
@@ -274,6 +276,13 @@ def load_css() -> None:
             border-right: 1px solid var(--border) !important;
         }
         [data-testid="stSidebar"] * { color: var(--text) !important; }
+        [data-testid="stSidebar"] [data-testid="stRadio"] label { cursor: pointer; }
+        /* Override red radio dot to cyan */
+        [data-testid="stSidebar"] input[type="radio"]:checked + div,
+        [data-testid="stSidebar"] input[type="radio"]:checked + div > div { color: var(--accent) !important; }
+        [data-testid="stSidebar"] [aria-checked="true"] { color: var(--accent) !important; }
+        div[data-baseweb="radio"] > label > div:first-child { border-color: var(--accent) !important; }
+        div[data-baseweb="radio"] > label > div:first-child div { background: var(--accent) !important; }
         .nav-header {
             font-family: var(--mono);
             font-size: 0.7rem;
@@ -385,6 +394,9 @@ def render_header() -> None:
                 <span class="badge badge-fill" style="background:#A78BFA;color:var(--bg);">WorldQuant</span>
                 <span class="badge badge-outline">{p["location"]}</span>
                 <span class="badge badge-outline">Open to Work</span>
+            </div>
+            <div style="font-family:var(--mono);font-size:0.72rem;color:var(--muted);margin-top:1rem;letter-spacing:0.04em;">
+                {p["email"]}
             </div>
         </div>
         """,
