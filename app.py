@@ -37,7 +37,7 @@ PERSONAL = {
 }
 
 STATS = [
-    {"value": "10+", "label": "Projects Deployed"},
+    {"value": "9+",  "label": "Projects Deployed"},
     {"value": "3",   "label": "Certifications"},
     {"value": "27",  "label": "Features Engineered"},
     {"value": "0.97","label": "Best Model AUC"},
@@ -392,12 +392,10 @@ def render_header() -> None:
     )
     # Use st.link_button for CTA buttons — avoids Streamlit HTML interception issues
     # and correctly handles mailto: links
-    cols = st.columns([1.4, 1, 1, 3])
+    cols = st.columns([1, 1, 4])
     with cols[0]:
-        st.link_button("Contact Me", f"mailto:{p['email']}", use_container_width=True)
-    with cols[1]:
         st.link_button("GitHub", p["github"], use_container_width=True)
-    with cols[2]:
+    with cols[1]:
         st.link_button("LinkedIn", p["linkedin"], use_container_width=True)
     st.markdown('<hr class="divider" />', unsafe_allow_html=True)
 
