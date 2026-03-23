@@ -276,13 +276,14 @@ def load_css() -> None:
             border-right: 1px solid var(--border) !important;
         }
         [data-testid="stSidebar"] * { color: var(--text) !important; }
-        [data-testid="stSidebar"] [data-testid="stRadio"] label { cursor: pointer; }
-        /* Override red radio dot to cyan */
-        [data-testid="stSidebar"] input[type="radio"]:checked + div,
-        [data-testid="stSidebar"] input[type="radio"]:checked + div > div { color: var(--accent) !important; }
-        [data-testid="stSidebar"] [aria-checked="true"] { color: var(--accent) !important; }
-        div[data-baseweb="radio"] > label > div:first-child { border-color: var(--accent) !important; }
-        div[data-baseweb="radio"] > label > div:first-child div { background: var(--accent) !important; }
+        /* Radio dot — target the SVG and filled circle Streamlit renders */
+        [data-testid="stSidebar"] [role="radio"] svg { fill: var(--accent) !important; }
+        [data-testid="stSidebar"] [role="radio"] [data-checked="true"] { color: var(--accent) !important; }
+        div[data-baseweb="radio"] div div { border-color: var(--accent) !important; }
+        div[data-baseweb="radio"] [data-checked="true"] div { background-color: var(--accent) !important; border-color: var(--accent) !important; }
+        /* Fallback: colour any visible circle in the sidebar */
+        [data-testid="stSidebar"] span[data-baseweb="radio"] > div { border-color: var(--accent) !important; }
+        [data-testid="stSidebar"] span[data-baseweb="radio"] > div > div { background: var(--accent) !important; }
         .nav-header {
             font-family: var(--mono);
             font-size: 0.7rem;
@@ -395,7 +396,7 @@ def render_header() -> None:
                 <span class="badge badge-outline">{p["location"]}</span>
                 <span class="badge badge-outline">Open to Work</span>
             </div>
-            <div style="font-family:var(--mono);font-size:0.72rem;color:var(--muted);margin-top:1rem;letter-spacing:0.04em;">
+            <div style="font-family:var(--mono);font-size:0.78rem;color:var(--text);margin-top:1rem;letter-spacing:0.06em;opacity:0.85;">
                 {p["email"]}
             </div>
         </div>
