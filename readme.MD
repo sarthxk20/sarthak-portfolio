@@ -12,12 +12,12 @@ I'm a **Data Scientist and Machine Learning Engineer** with hands-on experience 
 
 ## Projects
 
-### PortIQ — AI Portfolio Analyser
+### PortIQ — GTM Opportunity Scoring Platform
 **[Live App](https://portiq.streamlit.app/) · [GitHub](https://github.com/sarthxk20/PortIQ)**
 
-**Problem:** Retail investors lack accessible tools to objectively evaluate portfolio composition, risk exposure, and alignment with financial goals.  
-**Approach:** Built an AI-powered analysis engine that processes holdings data, applies ML-based risk scoring, and generates plain-language investment insights using NLP.  
-**Result:** A live Streamlit application delivering personalised portfolio diagnostics, sector breakdowns, and actionable recommendations.
+**Problem:** SaaS GTM teams targeting the container shipping industry have no systematic way to identify, score, and prioritise the strongest prospects.  
+**Approach:** Built an end-to-end ML pipeline over 1,200 AIS vessel data points across 180 companies, engineering 27 GTM-relevant features. Trained a Random Forest classifier with 5-fold cross-validation.  
+**Result:** Achieved AUC ~0.97. Deployed a live dashboard with tiered prospect rankings and TAM/SAM/SOM market sizing — turning hours of manual prospecting into an instant, data-driven shortlist.
 
 ---
 
@@ -25,8 +25,8 @@ I'm a **Data Scientist and Machine Learning Engineer** with hands-on experience 
 **[Live App](https://demandiq.streamlit.app/) · [GitHub](https://github.com/sarthxk20/DemandIQ)**
 
 **Problem:** Businesses without accurate demand forecasts face chronic inventory imbalances — excess stock or costly shortfalls.  
-**Approach:** Developed a forecasting system using time-series modelling and machine learning to predict future demand across product categories, with configurable horizons and confidence intervals.  
-**Result:** A deployed dashboard enabling businesses to simulate demand scenarios and plan inventory with data-backed confidence.
+**Approach:** Decomposed historical sales into trend, seasonality, and residual components. Evaluated Prophet, Statsmodels, and Scikit-learn, then added confidence intervals and anomaly detection.  
+**Result:** A deployed 14-day forecasting dashboard enabling scenario simulation and inventory planning — addressing a problem that costs retailers an estimated 12% of annual revenue.
 
 ---
 
@@ -34,8 +34,8 @@ I'm a **Data Scientist and Machine Learning Engineer** with hands-on experience 
 **[Live App](https://spacex-launch-dashboard.streamlit.app) · [GitHub](https://github.com/sarthxk20/spacex-launch-dashboard)**
 
 **Problem:** SpaceX's reusable rocket programme generates rich launch data, but no accessible tool existed to explore mission success patterns interactively.  
-**Approach:** Integrated the SpaceX REST API, performed feature engineering, and trained a Logistic Regression classifier to predict first-stage landing success.  
-**Result:** An interactive Streamlit dashboard with Plotly visualisations enabling drill-down by orbit type, payload mass, and launch site.
+**Approach:** Collected data via the SpaceX REST API and web scraping across 4 structured notebooks. Trained a Logistic Regression classifier on launch parameters.  
+**Result:** An interactive Streamlit dashboard covering mission success rates, rocket reliability, and launchpad performance — with a live ML-powered success predictor.
 
 ---
 
@@ -52,9 +52,9 @@ I'm a **Data Scientist and Machine Learning Engineer** with hands-on experience 
 
 ## Certifications
 
-- **Data Science Professional Certificate** — IBM
-- **Machine Learning & AI with Python** — HarvardX (edX)
-- **Applied Data Science Lab** — WorldQuant University
+- **Data Science Professional Certificate** — IBM (Oct 2025)
+- **Machine Learning & AI with Python** — HarvardX (Dec 2025)
+- **Applied Data Science Lab** — WorldQuant University (Jan 2026)
 
 ---
 
@@ -73,9 +73,8 @@ streamlit run app.py
 
 ```
 portfolio/
-├── app.py           # Routing only
-├── components.py    # All UI rendering
-├── config.py        # All content — edit this to update the site
+├── app.py           # Entire portfolio — content, styles, and routing in one file
+├── resume.pdf       # Downloaded via the Resume section
 └── requirements.txt
 ```
 
