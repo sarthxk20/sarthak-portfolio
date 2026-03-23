@@ -1,5 +1,4 @@
 # app.py — Sarthak Shandilya · Data Science & ML Portfolio
-# Single-file Streamlit portfolio. Edit the CONTENT section below to update anything.
 
 from __future__ import annotations
 
@@ -157,7 +156,7 @@ CERTIFICATIONS = [
     {
         "title": "Data Science Professional Certificate",
         "issuer": "IBM",
-        "year": "2024",
+        "year": "Oct 2025",
         "description": (
             "10-course specialisation covering data analysis, machine learning, "
             "SQL, Python, and data visualisation with real-world capstone projects."
@@ -166,7 +165,7 @@ CERTIFICATIONS = [
     {
         "title": "Machine Learning & AI with Python",
         "issuer": "HarvardX (edX)",
-        "year": "2024",
+        "year": "Dec 2025",
         "description": (
             "Graduate-level programme covering supervised and unsupervised learning, "
             "neural networks, and applied AI methods using Python."
@@ -175,7 +174,7 @@ CERTIFICATIONS = [
     {
         "title": "Applied Data Science Lab",
         "issuer": "WorldQuant University",
-        "year": "2024",
+        "year": "Jan 2026",
         "description": (
             "Hands-on data science programme with project-based learning across "
             "data wrangling, statistical modelling, and applied machine learning."
