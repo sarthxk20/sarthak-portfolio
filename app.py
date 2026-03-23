@@ -37,10 +37,10 @@ PERSONAL = {
 }
 
 STATS = [
-    {"value": "3",  "label": "Projects Deployed"},
-    {"value": "3",  "label": "Certifications"},
-    {"value": "27", "label": "Features Engineered"},
-    {"value": "0.97", "label": "Best Model AUC"},
+    {"value": "10+", "label": "Projects Deployed"},
+    {"value": "3",   "label": "Certifications"},
+    {"value": "27",  "label": "Features Engineered"},
+    {"value": "0.97","label": "Best Model AUC"},
 ]
 
 PROJECTS = [
@@ -381,20 +381,25 @@ def render_header() -> None:
             <div class="hero-tagline">{p["tagline"]}</div>
             <div class="hero-badges">
                 <span class="badge badge-fill">IBM Certified</span>
+                <span class="badge badge-fill" style="background:var(--gold);color:var(--bg);">HarvardX</span>
+                <span class="badge badge-fill" style="background:#A78BFA;color:var(--bg);">WorldQuant</span>
                 <span class="badge badge-outline">{p["location"]}</span>
                 <span class="badge badge-outline">Open to Work</span>
             </div>
-            <div class="hero-cta">
-                <a class="cta-btn cta-primary" href="mailto:{p['email']}">Contact Me</a>
-                <a class="cta-btn cta-secondary" href="{p['github']}" target="_blank">GitHub</a>
-                <a class="cta-btn cta-secondary" href="{p['linkedin']}" target="_blank">LinkedIn</a>
-
-            </div>
         </div>
-        <hr class="divider" />
         """,
         unsafe_allow_html=True,
     )
+    # Use st.link_button for CTA buttons — avoids Streamlit HTML interception issues
+    # and correctly handles mailto: links
+    cols = st.columns([1.4, 1, 1, 3])
+    with cols[0]:
+        st.link_button("Contact Me", f"mailto:{p['email']}", use_container_width=True)
+    with cols[1]:
+        st.link_button("GitHub", p["github"], use_container_width=True)
+    with cols[2]:
+        st.link_button("LinkedIn", p["linkedin"], use_container_width=True)
+    st.markdown('<hr class="divider" />', unsafe_allow_html=True)
 
 
 def render_about() -> None:
