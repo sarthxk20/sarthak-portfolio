@@ -38,6 +38,36 @@ STATS = [
 
 PROJECTS = [
     {
+        "title": "MorphGen — Conditional Generative Face Synthesis",
+        "tag": "Deep Learning · Conditional DCGAN · WGAN-GP · PyTorch · CelebA",
+        "problem": (
+            "Generating realistic, attribute-controlled facial images requires stable "
+            "adversarial training — a notoriously difficult regime prone to mode collapse, "
+            "training instability, and poor conditioning on target attributes."
+        ),
+        "approach": (
+            "Trained a Conditional DCGAN on CelebA (~200K images) using WGAN-GP loss with "
+            "gradient penalty and spectral normalisation to enforce stable convergence. "
+            "Implemented label conditioning via class embedding concatenation to enable "
+            "attribute-specific generation across gender, age, and expression."
+        ),
+        "result": (
+            "Achieved attribute-conditioned face synthesis across 50 epochs with no mode "
+            "collapse — resolving training instability through critic-to-generator update "
+            "ratio tuning and adaptive learning rate scheduling. Deployed an interactive "
+            "synthesis interface via Streamlit."
+        ),
+        "highlights": [
+            "Conditional DCGAN · WGAN-GP loss with gradient penalty",
+            "Trained on CelebA ~200K images · 50 epochs · stable convergence",
+            "Attribute conditioning: gender, age, expression via class embeddings",
+            "Spectral normalisation · adaptive LR scheduling · no mode collapse",
+        ],
+        "live_url": "https://morphgen.streamlit.app/",
+        "github_url": "https://github.com/sarthxk20/MorphGen",
+        "badge_color": "#A78BFA",
+    },
+    {
         "title": "PortIQ — GTM Opportunity Scoring Platform",
         "tag": "Machine Learning · Random Forest · AIS Data · Streamlit",
         "problem": (
@@ -92,36 +122,6 @@ PROJECTS = [
         "live_url": "https://demandiq.streamlit.app/",
         "github_url": "https://github.com/sarthxk20/DemandIQ",
         "badge_color": "#FFD166",
-    },
-    {
-        "title": "MorphGen — Conditional Generative Face Synthesis",
-        "tag": "Deep Learning · Conditional DCGAN · WGAN-GP · PyTorch · CelebA",
-        "problem": (
-            "Generating realistic, attribute-controlled facial images requires stable "
-            "adversarial training — a notoriously difficult regime prone to mode collapse, "
-            "training instability, and poor conditioning on target attributes."
-        ),
-        "approach": (
-            "Trained a Conditional DCGAN on CelebA (~200K images) using WGAN-GP loss with "
-            "gradient penalty and spectral normalisation to enforce stable convergence. "
-            "Implemented label conditioning via class embedding concatenation to enable "
-            "attribute-specific generation across gender, age, and expression."
-        ),
-        "result": (
-            "Achieved attribute-conditioned face synthesis across 50 epochs with no mode "
-            "collapse — resolving training instability through critic-to-generator update "
-            "ratio tuning and adaptive learning rate scheduling. Deployed an interactive "
-            "synthesis interface via Streamlit."
-        ),
-        "highlights": [
-            "Conditional DCGAN · WGAN-GP loss with gradient penalty",
-            "Trained on CelebA ~200K images · 50 epochs · stable convergence",
-            "Attribute conditioning: gender, age, expression via class embeddings",
-            "Spectral normalisation · adaptive LR scheduling · no mode collapse",
-        ],
-        "live_url": "https://morphgen.streamlit.app/",
-        "github_url": "https://github.com/sarthxk20/MorphGen",
-        "badge_color": "#A78BFA",
     },
 ]
 
@@ -334,7 +334,7 @@ def load_css() -> None:
         .psa-text { font-size: 0.85rem; color: var(--text); line-height: 1.5; }
         .project-highlights { margin: 1rem 0; padding: 0; list-style: none; }
         .project-highlights li { font-size: 0.82rem; color: var(--muted); padding: 0.2rem 0 0.2rem 1.2rem; position: relative; }
-        .project-highlights li::before { content: '\25B8'; position: absolute; left: 0; color: var(--accent); }
+        .project-highlights li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
         .project-links { display: flex; gap: 0.75rem; margin-top: 1.2rem; flex-wrap: wrap; }
         .project-link { display: inline-flex; align-items: center; font-family: var(--mono); font-size: 0.7rem; padding: 0.4rem 0.9rem; border-radius: 6px; border: 1px solid var(--border); color: var(--text) !important; transition: all 0.15s ease; }
         .project-link:hover { border-color: var(--accent); color: var(--accent) !important; text-decoration: none !important; }
