@@ -31,7 +31,7 @@ PERSONAL = {
 
 STATS = [
     {"value": "9+",  "label": "Projects Deployed"},
-    {"value": "3",   "label": "Certifications"},
+    {"value": "4",   "label": "Certifications"},
     {"value": "27",  "label": "Features Engineered"},
     {"value": "0.97","label": "Best Model AUC"},
 ]
@@ -151,6 +151,16 @@ SKILLS = {
 
 CERTIFICATIONS = [
     {
+        "title": "Machine Learning Specialization",
+        "issuer": "Stanford Online & DeepLearning.AI (Andrew Ng)",
+        "year": "Apr 2026",
+        "description": (
+            "Three-course specialisation covering supervised learning, unsupervised learning, "
+            "and reinforcement learning — including neural networks, decision trees, "
+            "recommender systems, and best practices for production ML systems."
+        ),
+    },
+    {
         "title": "Data Science Professional Certificate",
         "issuer": "IBM",
         "year": "Oct 2025",
@@ -211,9 +221,9 @@ WHY_HIRE = [
         "icon": "04",
         "heading": "Verified, Multi-Institution Training",
         "body": (
-            "Certified by IBM, HarvardX, and WorldQuant University — three programmes "
-            "spanning core data science, graduate-level ML, and applied project work. "
-            "Theory and practice in equal measure."
+            "Certified by Stanford/DeepLearning.AI, IBM, HarvardX, and WorldQuant University — "
+            "four programmes spanning core data science, graduate-level ML, and applied "
+            "project work. Theory and practice in equal measure."
         ),
     },
 ]
@@ -270,9 +280,7 @@ def load_css() -> None:
             border-right: 1px solid var(--border) !important;
         }
         [data-testid="stSidebar"] * { color: var(--text) !important; }
-        /* Hide the radio dot entirely — cleaner than trying to recolor it */
         [data-testid="stSidebar"] div[data-baseweb="radio"] > label > div:first-child { display: none !important; }
-        /* Style selected item label with accent colour and left bar instead */
         [data-testid="stSidebar"] div[data-baseweb="radio"] > label {
             padding-left: 0.75rem !important;
             border-left: 2px solid transparent;
@@ -371,7 +379,6 @@ def load_css() -> None:
 
         .footer { text-align: center; padding: 2rem 0 1rem; font-family: var(--mono); font-size: 0.65rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 3rem; letter-spacing: 0.08em; }
 
-        /* Style st.link_button to match portfolio dark theme */
         [data-testid="stLinkButton"] a {
             background: transparent !important;
             color: var(--text) !important;
@@ -410,6 +417,7 @@ def render_header() -> None:
                 <span class="badge badge-fill">IBM Certified</span>
                 <span class="badge badge-fill" style="background:var(--gold);color:var(--bg);">HarvardX</span>
                 <span class="badge badge-fill" style="background:#A78BFA;color:var(--bg);">WorldQuant</span>
+                <span class="badge badge-fill" style="background:#34D399;color:var(--bg);">Stanford · DeepLearning.AI</span>
                 <span class="badge badge-outline">{p["location"]}</span>
                 <span class="badge badge-outline">Open to Work</span>
             </div>
@@ -420,8 +428,6 @@ def render_header() -> None:
         """,
         unsafe_allow_html=True,
     )
-    # Use st.link_button for CTA buttons — avoids Streamlit HTML interception issues
-    # and correctly handles mailto: links
     cols = st.columns([1, 1, 4])
     with cols[0]:
         st.link_button("GitHub", p["github"], use_container_width=True)
@@ -452,12 +458,10 @@ def render_about() -> None:
 
 
 def render_projects() -> None:
-    # Section header
     st.markdown(
         '<div class="section-label">// 02 · WORK</div><div class="section-title">Projects</div>',
         unsafe_allow_html=True,
     )
-    # Each card in its own st.markdown call to avoid Streamlit's HTML truncation limit
     for p in PROJECTS:
         highlights = "".join(f"<li>{h}</li>" for h in p["highlights"])
         st.markdown(
@@ -608,7 +612,6 @@ def render_footer() -> None:
 
 
 # ROUTING
-
 
 PAGES: dict[str, Callable[[], None] | None] = {
     "All":            None,
