@@ -13,16 +13,14 @@ PERSONAL = {
     "title": "Data Scientist & Machine Learning Engineer",
     "tagline": "Building intelligent systems that transform data into measurable impact.",
     "bio": (
-        "Data Scientist and Machine Learning Engineer with hands-on experience building "
-        "end-to-end analytical and AI-powered systems — from data ingestion through to "
-        "production deployment. I specialise in machine learning, NLP, and predictive "
-        "modelling, and hold certifications from IBM, HarvardX, and WorldQuant University. "
-        "I am particularly interested in roles at tech, fintech, and e-commerce companies "
-        "where data and ML directly shape product decisions and business outcomes — whether "
-        "that is at a high-growth startup or within an analytics team at scale."
+        "Data Scientist and ML Engineer with production experience across LLMOps, "
+        "generative modelling, predictive analytics, and time series forecasting — "
+        "delivering ROUGE-1 0.50 (+138%), AUC ~0.97, and ~60% forecast error reduction "
+        "via scalable end-to-end deployments with Docker, Kubernetes, and GitHub Actions CI/CD. "
+        "Certified by Duke University, Stanford/DeepLearning.AI, IBM, HarvardX, and WorldQuant University."
     ),
-    "currently_learning": "MLflow, Docker, and building reproducible ML pipelines",
-    "open_to": "Data Scientist · ML Engineer · Analytics — tech, fintech, and e-commerce",
+    "currently_learning": "Advanced LLMOps — QLoRA fine-tuning, RAG architectures, and production model serving",
+    "open_to": "Data Scientist · ML Engineer · LLMOps — tech, fintech, and e-commerce",
     "email": "sarthakshandilya9@gmail.com",
     "linkedin": "https://www.linkedin.com/in/sarthxk20",
     "github": "https://github.com/sarthxk20",
@@ -30,13 +28,44 @@ PERSONAL = {
 }
 
 STATS = [
-    {"value": "9+",  "label": "Projects Deployed"},
-    {"value": "4",   "label": "Certifications"},
-    {"value": "27",  "label": "Features Engineered"},
-    {"value": "0.97","label": "Best Model AUC"},
+    {"value": "4",    "label": "Projects Deployed"},
+    {"value": "5",    "label": "Certifications"},
+    {"value": "0.50", "label": "ROUGE-1 (LLMOps)"},
+    {"value": "0.97", "label": "Best Model AUC"},
 ]
 
 PROJECTS = [
+    {
+        "title": "LLMOps Serving Platform — QLoRA Fine-Tuning + RAG Inference",
+        "tag": "TinyLlama-1.1B · QLoRA · PEFT/TRL · FastAPI · FAISS · MLflow · Docker · Kubernetes · GitHub Actions",
+        "problem": (
+            "Deploying a fine-tuned LLM for customer support requires solving three hard problems "
+            "simultaneously: efficient fine-tuning on constrained hardware, low-latency RAG-augmented "
+            "inference, and a production-grade CI/CD pipeline with reproducible experiment tracking."
+        ),
+        "approach": (
+            "Fine-tuned TinyLlama-1.1B-Chat on the Bitext customer-support dataset using QLoRA "
+            "(r=16, nf4 4-bit quantisation) via PEFT/TRL on Kaggle T4 GPU. Built a FastAPI inference "
+            "server with FAISS-backed RAG using sentence-transformers, tracked experiments with MLflow "
+            "on DagsHub, containerised via Docker multi-stage build, and deployed Kubernetes manifests "
+            "with GitHub Actions CI/CD (pytest + ruff)."
+        ),
+        "result": (
+            "Training loss 0.99→0.56 across 3 epochs. ROUGE-1: 0.50 (+138%), ROUGE-2: 0.27 (+200%), "
+            "ROUGE-L: 0.36 (+100%) vs. baseline. CI green — 27 pytest tests passing, Docker image "
+            "auto-published to GHCR on every merge. Full MLOps lifecycle from fine-tuning to serving."
+        ),
+        "highlights": [
+            "QLoRA fine-tuning (r=16, nf4 4-bit) · TinyLlama-1.1B-Chat · Bitext dataset · 3 epochs",
+            "ROUGE-1 0.50 (+138%) · ROUGE-2 0.27 (+200%) · ROUGE-L 0.36 (+100%)",
+            "FastAPI inference server · FAISS RAG · sentence-transformers embeddings",
+            "Docker → GHCR · Kubernetes manifests · GitHub Actions CI/CD · 27 pytest tests green",
+            "MLflow experiment tracking on DagsHub · best run: ef3500f6507243efa16c76be568d7ab7",
+        ],
+        "live_url": "https://dagshub.com/sarthxk20/llmops-platform.mlflow",
+        "github_url": "https://github.com/sarthxk20/llmops-platform",
+        "badge_color": "#34D399",
+    },
     {
         "title": "MorphGen — Conditional Generative Face Synthesis",
         "tag": "Deep Learning · Conditional DCGAN · WGAN-GP · PyTorch · CelebA",
@@ -98,26 +127,26 @@ PROJECTS = [
     },
     {
         "title": "DemandIQ — Demand Forecasting Engine",
-        "tag": "Time Series · Forecasting · Prophet · Streamlit",
+        "tag": "Time Series · Forecasting · Prophet · XGBoost · PySpark · Docker",
         "problem": (
             "Businesses without accurate demand forecasts face chronic inventory "
             "imbalances — either excess stock tying up capital or costly shortfalls."
         ),
         "approach": (
-            "Decomposed historical sales into trend, seasonality, and residual components. "
-            "Evaluated multiple models — Prophet, Statsmodels, and Scikit-learn — selecting "
-            "the best performer, then added confidence intervals and anomaly detection."
+            "Forecasted demand across 1M+ retail records using ARIMA, SARIMA, Prophet, "
+            "and XGBoost. Architected a containerised PySpark pipeline with Parquet-optimised "
+            "storage, anomaly detection via residual analysis, and confidence interval modelling."
         ),
         "result": (
-            "A deployed 14-day forecasting dashboard enabling scenario simulation and "
-            "inventory planning — addressing a problem that costs retailers an estimated "
-            "12% of annual revenue through overstock and stockouts."
+            "~60% forecast error reduction vs. naive baseline. A deployed 14-day forecasting "
+            "dashboard enabling scenario simulation and inventory planning — addressing a problem "
+            "that costs retailers an estimated 12% of annual revenue through overstock and stockouts."
         ),
         "highlights": [
-            "14-day demand forecasts with confidence interval modelling",
-            "Multi-model comparison: Prophet, Statsmodels, Scikit-learn",
-            "Anomaly detection via residual analysis",
-            "Scenario simulation with real-time inventory impact",
+            "1M+ retail records · ARIMA · SARIMA · Prophet · XGBoost ensemble",
+            "~60% forecast error reduction vs. naive baseline · 14-day forward planning",
+            "Containerised PySpark pipeline with Docker and MLflow",
+            "Anomaly detection · scenario simulation · confidence intervals via Streamlit",
         ],
         "live_url": "https://demandiq.streamlit.app/",
         "github_url": "https://github.com/sarthxk20/DemandIQ",
@@ -136,20 +165,38 @@ SKILLS = {
         {"name": "NumPy",        "level": 85},
         {"name": "BERT / NLP",   "level": 70},
     ],
-    "Visualisation": [
-        {"name": "Plotly",  "level": 85},
-        {"name": "Seaborn", "level": 80},
-        {"name": "Tableau", "level": 65},
+    "Deep Learning & GenAI": [
+        {"name": "PyTorch",          "level": 80},
+        {"name": "Hugging Face",     "level": 80},
+        {"name": "QLoRA / PEFT",     "level": 75},
+        {"name": "LangChain / RAG",  "level": 75},
+        {"name": "FAISS",            "level": 70},
     ],
-    "Deployment & Tools": [
+    "MLOps & Deployment": [
+        {"name": "Docker",           "level": 80},
+        {"name": "Kubernetes",       "level": 70},
+        {"name": "GitHub Actions",   "level": 80},
+        {"name": "MLflow / DagsHub", "level": 80},
+        {"name": "FastAPI",          "level": 75},
+    ],
+    "Visualisation & Tools": [
         {"name": "Streamlit",    "level": 90},
-        {"name": "GitHub",       "level": 80},
-        {"name": "Google Colab", "level": 85},
-        {"name": "VS Code",      "level": 85},
+        {"name": "Plotly",       "level": 85},
+        {"name": "Seaborn",      "level": 80},
+        {"name": "Tableau",      "level": 65},
     ],
 }
 
 CERTIFICATIONS = [
+    {
+        "title": "MLOps | Machine Learning Operations Specialization",
+        "issuer": "Duke University",
+        "year": "May 2026",
+        "description": (
+            "Specialisation covering the full MLOps lifecycle — model deployment, CI/CD pipelines, "
+            "model monitoring, containerisation with Docker and Kubernetes, and cloud ML on AWS and Azure."
+        ),
+    },
     {
         "title": "Machine Learning Specialization",
         "issuer": "Stanford Online & DeepLearning.AI (Andrew Ng)",
@@ -161,21 +208,21 @@ CERTIFICATIONS = [
         ),
     },
     {
-        "title": "Data Science Professional Certificate",
-        "issuer": "IBM",
-        "year": "Oct 2025",
-        "description": (
-            "10-course specialisation covering data analysis, machine learning, "
-            "SQL, Python, and data visualisation with real-world capstone projects."
-        ),
-    },
-    {
         "title": "Machine Learning & AI with Python",
         "issuer": "HarvardX (edX)",
         "year": "Dec 2025",
         "description": (
             "Graduate-level programme covering supervised and unsupervised learning, "
             "neural networks, and applied AI methods using Python."
+        ),
+    },
+    {
+        "title": "Data Science Professional Certificate",
+        "issuer": "IBM",
+        "year": "Oct 2025",
+        "description": (
+            "10-course specialisation covering data analysis, machine learning, "
+            "SQL, Python, and data visualisation with real-world capstone projects."
         ),
     },
     {
@@ -194,18 +241,18 @@ WHY_HIRE = [
         "icon": "01",
         "heading": "Production-First Mindset",
         "body": (
-            "Every project I build goes beyond the notebook — from data ingestion "
-            "to a live, deployed application. I treat deployment as part of the "
-            "work, not an afterthought."
+            "Every project goes beyond the notebook — from fine-tuning LLMs to containerised "
+            "FastAPI servers, Kubernetes deployments, and green CI/CD pipelines. "
+            "Deployment is part of the work, not an afterthought."
         ),
     },
     {
         "icon": "02",
         "heading": "Breadth Across the ML Stack",
         "body": (
-            "From time-series forecasting and NLP to classification and deep generative "
-            "modelling, I have applied machine learning across diverse domains — "
-            "with nine deployed projects to demonstrate it."
+            "From LLMOps and QLoRA fine-tuning to time-series forecasting, classification, "
+            "and deep generative modelling — applied across four deployed projects with "
+            "measurable, production-grade results."
         ),
     },
     {
@@ -221,9 +268,9 @@ WHY_HIRE = [
         "icon": "04",
         "heading": "Verified, Multi-Institution Training",
         "body": (
-            "Certified by Stanford/DeepLearning.AI, IBM, HarvardX, and WorldQuant University — "
-            "four programmes spanning core data science, graduate-level ML, and applied "
-            "project work. Theory and practice in equal measure."
+            "Certified by Duke University, Stanford/DeepLearning.AI, HarvardX, IBM, and "
+            "WorldQuant University — five programmes spanning MLOps, core data science, "
+            "graduate-level ML, and applied project work."
         ),
     },
 ]
@@ -409,15 +456,16 @@ def render_header() -> None:
     st.markdown(
         f"""
         <div class="hero-wrap">
-            <div class="hero-mono">// PORTFOLIO · DATA SCIENCE</div>
+            <div class="hero-mono">// PORTFOLIO · DATA SCIENCE & LLMOPS</div>
             <div class="hero-name">{p["name"].split()[0]} <span>{p["name"].split()[1]}</span></div>
             <div class="hero-title">_{p["title"]}</div>
             <div class="hero-tagline">{p["tagline"]}</div>
             <div class="hero-badges">
+                <span class="badge badge-fill" style="background:#34D399;color:var(--bg);">Duke University</span>
                 <span class="badge badge-fill">IBM Certified</span>
                 <span class="badge badge-fill" style="background:var(--gold);color:var(--bg);">HarvardX</span>
                 <span class="badge badge-fill" style="background:#A78BFA;color:var(--bg);">WorldQuant</span>
-                <span class="badge badge-fill" style="background:#34D399;color:var(--bg);">Stanford · DeepLearning.AI</span>
+                <span class="badge badge-fill" style="background:#F472B6;color:var(--bg);">Stanford · DeepLearning.AI</span>
                 <span class="badge badge-outline">{p["location"]}</span>
                 <span class="badge badge-outline">Open to Work</span>
             </div>
@@ -447,7 +495,7 @@ def render_about() -> None:
         <div class="section-title">Who I Am</div>
         <p style="font-size:1rem;line-height:1.75;color:var(--text);max-width:680px;margin-bottom:1.5rem;">{PERSONAL["bio"]}</p>
         <p style="font-size:0.85rem;color:var(--muted);font-family:var(--mono);margin-bottom:1.5rem;">
-            Currently learning: {PERSONAL["currently_learning"]}<br/>
+            Currently focused on: {PERSONAL["currently_learning"]}<br/>
             Seeking: {PERSONAL["open_to"]}
         </p>
         <div class="stats-wrap">{stats_html}</div>
@@ -464,6 +512,7 @@ def render_projects() -> None:
     )
     for p in PROJECTS:
         highlights = "".join(f"<li>{h}</li>" for h in p["highlights"])
+        live_label = "MLflow Dashboard" if "llmops" in p["github_url"] else "Live App"
         st.markdown(
             f"""
             <div class="project-card" style="--accent-color:{p['badge_color']}">
@@ -476,7 +525,7 @@ def render_projects() -> None:
                 </div>
                 <ul class="project-highlights">{highlights}</ul>
                 <div class="project-links">
-                    <a class="project-link" href="{p['live_url']}" target="_blank">Live App</a>
+                    <a class="project-link" href="{p['live_url']}" target="_blank">{live_label}</a>
                     <a class="project-link" href="{p['github_url']}" target="_blank">GitHub</a>
                 </div>
             </div>
